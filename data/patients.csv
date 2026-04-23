@@ -1,0 +1,501 @@
+patient_id,name,age,gender,condition,ward,floor,admission_date,release_date,doctor_assigned
+P000001,Vivaan Davis,38,Female,Anxiety Disorder,Psychiatric Ward,5,2026-04-18,2026-04-28,Dr. Arvind Menon
+P000002,Sai Reddy,54,Male,Anxiety Disorder,Psychiatric Ward,5,2026-03-19,2026-03-21,Dr. Priya Nair
+P000003,Barbara Johnson,46,Female,Cancer,Oncology Ward,4,2026-03-06,2026-03-11,Dr. Meera Iyer
+P000004,Myra Nair,65,Female,Cardiology,Cardiac Care Unit,3,2026-04-17,2026-04-26,Dr. Anita Rao
+P000005,Anika Lopez,34,Male,Anxiety Disorder,Psychiatric Ward,5,2026-03-20,2026-03-29,Dr. Priya Nair
+P000006,Kiara Patel,56,Female,Diabetes,Endocrinology Ward,2,2026-03-14,2026-03-22,Dr. Thomas Wright
+P000007,Susan Patel,63,Female,Cardiology,Cardiac Care Unit,3,2026-02-28,2026-03-05,Dr. Anita Rao
+P000008,Kiara Nair,70,Female,Cancer,Oncology Ward,4,2026-04-13,2026-04-29,Dr. Samuel Chen
+P000009,Linda Nair,49,Male,Diabetes,Endocrinology Ward,2,2026-04-13,2026-04-20,Dr. Neha Gupta
+P000010,Kiara Nair,43,Male,Behavioral Issues,Behavioral Health Unit,5,2026-03-11,2026-03-17,Dr. Michael Green
+P000011,Emma Verma,30,Female,Anxiety Disorder,Psychiatric Ward,5,2026-03-03,2026-03-05,Dr. Arvind Menon
+P000012,Arjun Reddy,44,Male,Behavioral Issues,Behavioral Health Unit,5,2026-04-03,2026-04-17,Dr. Kavita Joshi
+P000013,Ira Wilson,37,Female,Behavioral Issues,Behavioral Health Unit,5,2026-04-07,2026-04-12,Dr. Kavita Joshi
+P000014,Michael Johnson,12,Male,Anxiety Disorder,Psychiatric Ward,5,2026-03-31,2026-04-08,Dr. Priya Nair
+P000015,Ishaan Smith,41,Female,Cancer,Oncology Ward,4,2026-02-27,2026-03-05,Dr. Meera Iyer
+P000016,Kabir Martinez,40,Male,Diabetes,Endocrinology Ward,2,2026-03-25,2026-03-31,Dr. Thomas Wright
+P000017,Aarav Garcia,36,Female,Anesthesiology,Surgical Recovery,1,2026-02-26,2026-03-04,Dr. David Park
+P000018,Myra Gupta,35,Female,Anxiety Disorder,Psychiatric Ward,5,2026-03-22,2026-03-28,Dr. Priya Nair
+P000019,Reyansh Lopez,52,Female,Diabetes,Endocrinology Ward,2,2026-03-14,2026-03-22,Dr. Neha Gupta
+P000020,Oliver Kumar,61,Male,Cancer,Oncology Ward,4,2026-03-16,2026-03-21,Dr. Samuel Chen
+P000021,Krishna Roy,27,Male,Behavioral Issues,Behavioral Health Unit,5,2026-04-20,2026-04-26,Dr. Kavita Joshi
+P000022,Sai Patel,26,Female,Anesthesiology,Surgical Recovery,1,2026-04-19,2026-04-26,Dr. Lakshmi Rao
+P000023,Meera Johnson,45,Male,Cardiology,Cardiac Care Unit,3,2026-02-23,2026-03-02,Dr. Anita Rao
+P000024,Ira Garcia,48,Female,Diabetes,Endocrinology Ward,2,2026-02-25,2026-03-02,Dr. Thomas Wright
+P000025,Rudra Patel,27,Male,Anxiety Disorder,Psychiatric Ward,5,2026-04-23,2026-04-28,Dr. Priya Nair
+P000026,Vihaan Iyer,57,Female,Cardiology,Cardiac Care Unit,3,2026-02-27,2026-03-03,Dr. Rajesh Kumar
+P000027,Aryan Nair,53,Male,Diabetes,Endocrinology Ward,2,2026-03-18,2026-03-24,Dr. Thomas Wright
+P000028,Meera Martinez,65,Male,Cancer,Oncology Ward,4,2026-04-17,2026-04-25,Dr. Samuel Chen
+P000029,Siya Shah,11,Male,Behavioral Issues,Behavioral Health Unit,5,2026-03-13,2026-03-26,Dr. Kavita Joshi
+P000030,Liam Das,52,Male,Anesthesiology,Surgical Recovery,1,2026-03-26,2026-03-31,Dr. Lakshmi Rao
+P000031,Diya Shah,39,Male,Anxiety Disorder,Psychiatric Ward,5,2026-03-26,2026-03-29,Dr. Priya Nair
+P000032,Robert Hernandez,78,Male,Cardiology,Cardiac Care Unit,3,2026-04-13,2026-04-20,Dr. Rajesh Kumar
+P000033,Kian Lopez,71,Male,Cancer,Oncology Ward,4,2026-04-13,2026-04-19,Dr. Samuel Chen
+P000034,Kiara Nair,37,Male,Behavioral Issues,Behavioral Health Unit,5,2026-03-27,2026-04-03,Dr. Michael Green
+P000035,Aadhya Reddy,45,Male,Behavioral Issues,Behavioral Health Unit,5,2026-03-20,2026-04-03,Dr. Kavita Joshi
+P000036,Vihaan Verma,24,Female,Diabetes,Endocrinology Ward,2,2026-04-20,2026-04-23,Dr. Neha Gupta
+P000037,Arjun Brown,61,Female,Cardiology,Cardiac Care Unit,3,2026-03-29,2026-04-05,Dr. Anita Rao
+P000038,William Iyer,57,Female,Diabetes,Endocrinology Ward,2,2026-03-17,2026-03-24,Dr. Thomas Wright
+P000039,Kian Garcia,53,Female,Diabetes,Endocrinology Ward,2,2026-04-07,2026-04-10,Dr. Thomas Wright
+P000040,Jennifer Menon,89,Male,Cancer,Oncology Ward,4,2026-03-25,2026-03-30,Dr. Meera Iyer
+P000041,Kian Smith,22,Male,Anxiety Disorder,Psychiatric Ward,5,2026-02-26,2026-03-05,Dr. Priya Nair
+P000042,Navya Menon,71,Female,Cardiology,Cardiac Care Unit,3,2026-03-03,2026-03-16,Dr. Anita Rao
+P000043,Michael Menon,14,Female,Behavioral Issues,Behavioral Health Unit,5,2026-04-07,2026-04-12,Dr. Kavita Joshi
+P000044,Noah Johnson,45,Female,Cardiology,Cardiac Care Unit,3,2026-03-16,2026-03-24,Dr. Anita Rao
+P000045,Kian Garcia,50,Female,Diabetes,Endocrinology Ward,2,2026-04-20,2026-04-28,Dr. Neha Gupta
+P000046,Charlotte Nair,75,Female,Cardiology,Cardiac Care Unit,3,2026-03-05,2026-03-14,Dr. Anita Rao
+P000047,Ananya Kumar,29,Female,Anesthesiology,Surgical Recovery,1,2026-04-16,2026-04-17,Dr. Lakshmi Rao
+P000048,Barbara Wilson,57,Female,Cardiology,Cardiac Care Unit,3,2026-03-01,2026-03-05,Dr. Rajesh Kumar
+P000049,Rohan Mehta,52,Female,Cardiology,Cardiac Care Unit,3,2026-02-25,2026-03-01,Dr. Rajesh Kumar
+P000050,Aryan Garcia,85,Male,Cardiology,Cardiac Care Unit,3,2026-02-26,2026-03-10,Dr. Rajesh Kumar
+P000051,Noah Singh,23,Female,Behavioral Issues,Behavioral Health Unit,5,2026-03-03,2026-03-08,Dr. Kavita Joshi
+P000052,Vivaan Kumar,27,Female,Anesthesiology,Surgical Recovery,1,2026-03-12,2026-03-19,Dr. Lakshmi Rao
+P000053,Sophia Miller,86,Male,Cardiology,Cardiac Care Unit,3,2026-02-28,2026-03-04,Dr. Rajesh Kumar
+P000054,Mia Shah,45,Male,Anxiety Disorder,Psychiatric Ward,5,2026-04-22,2026-04-27,Dr. Priya Nair
+P000055,Diya Lopez,40,Male,Cardiology,Cardiac Care Unit,3,2026-04-01,2026-04-09,Dr. Rajesh Kumar
+P000056,Charlotte Johnson,59,Female,Anxiety Disorder,Psychiatric Ward,5,2026-04-12,2026-04-18,Dr. Arvind Menon
+P000057,Richard Mehta,39,Male,Anxiety Disorder,Psychiatric Ward,5,2026-03-27,2026-04-03,Dr. Priya Nair
+P000058,William Reddy,34,Male,Anxiety Disorder,Psychiatric Ward,5,2026-03-11,2026-03-21,Dr. Priya Nair
+P000059,Arjun Garcia,28,Male,Behavioral Issues,Behavioral Health Unit,5,2026-02-28,2026-03-13,Dr. Kavita Joshi
+P000060,Saanvi Smith,34,Female,Anxiety Disorder,Psychiatric Ward,5,2026-04-03,2026-04-11,Dr. Arvind Menon
+P000061,Michael Singh,56,Female,Cardiology,Cardiac Care Unit,3,2026-03-15,2026-03-21,Dr. Rajesh Kumar
+P000062,Charlotte Sharma,24,Male,Anxiety Disorder,Psychiatric Ward,5,2026-03-27,2026-04-01,Dr. Arvind Menon
+P000063,Aisha Garcia,36,Male,Cardiology,Cardiac Care Unit,3,2026-03-12,2026-03-18,Dr. Anita Rao
+P000064,Linda Jones,57,Male,Diabetes,Endocrinology Ward,2,2026-03-02,2026-03-04,Dr. Neha Gupta
+P000065,Rudra Martinez,70,Female,Cardiology,Cardiac Care Unit,3,2026-03-15,2026-03-26,Dr. Anita Rao
+P000066,Patricia Williams,63,Male,Cardiology,Cardiac Care Unit,3,2026-03-23,2026-04-02,Dr. Rajesh Kumar
+P000067,Jennifer Miller,62,Male,Cardiology,Cardiac Care Unit,3,2026-03-05,2026-03-10,Dr. Rajesh Kumar
+P000068,Isabella Miller,32,Male,Cancer,Oncology Ward,4,2026-03-19,2026-03-25,Dr. Meera Iyer
+P000069,Krishna Shah,47,Female,Cardiology,Cardiac Care Unit,3,2026-03-16,2026-03-28,Dr. Rajesh Kumar
+P000070,Aisha Brown,49,Female,Anesthesiology,Surgical Recovery,1,2026-03-27,2026-04-01,Dr. David Park
+P000071,Noah Lopez,57,Female,Cancer,Oncology Ward,4,2026-03-05,2026-03-18,Dr. Samuel Chen
+P000072,Diya Shah,71,Female,Cardiology,Cardiac Care Unit,3,2026-04-08,2026-04-16,Dr. Rajesh Kumar
+P000073,Robert Patel,64,Male,Cardiology,Cardiac Care Unit,3,2026-04-19,2026-04-26,Dr. Rajesh Kumar
+P000074,Robert Shah,80,Male,Cancer,Oncology Ward,4,2026-03-01,2026-03-12,Dr. Samuel Chen
+P000075,Emma Williams,9,Male,Behavioral Issues,Behavioral Health Unit,5,2026-03-30,2026-04-11,Dr. Michael Green
+P000076,Anika Menon,67,Male,Anesthesiology,Surgical Recovery,1,2026-03-20,2026-03-24,Dr. Lakshmi Rao
+P000077,Diya Mehta,28,Male,Cancer,Oncology Ward,4,2026-04-02,2026-04-19,Dr. Samuel Chen
+P000078,Charlotte Shah,42,Female,Behavioral Issues,Behavioral Health Unit,5,2026-02-24,2026-02-27,Dr. Michael Green
+P000079,Linda Sharma,40,Female,Cardiology,Cardiac Care Unit,3,2026-04-20,2026-04-26,Dr. Rajesh Kumar
+P000080,Kian Shah,45,Male,Anxiety Disorder,Psychiatric Ward,5,2026-04-06,2026-04-14,Dr. Arvind Menon
+P000081,Sai Joshi,11,Male,Cardiology,Cardiac Care Unit,3,2026-04-09,2026-04-18,Dr. Anita Rao
+P000082,Jennifer Verma,29,Female,Anesthesiology,Surgical Recovery,1,2026-04-11,2026-04-13,Dr. Lakshmi Rao
+P000083,Aryan Singh,85,Female,Cancer,Oncology Ward,4,2026-03-10,2026-03-29,Dr. Samuel Chen
+P000084,Kabir Brown,74,Female,Diabetes,Endocrinology Ward,2,2026-03-09,2026-03-16,Dr. Neha Gupta
+P000085,Kabir Menon,72,Female,Cardiology,Cardiac Care Unit,3,2026-02-24,2026-03-10,Dr. Rajesh Kumar
+P000086,Susan Reddy,63,Male,Cardiology,Cardiac Care Unit,3,2026-04-08,2026-04-22,Dr. Anita Rao
+P000087,Saanvi Lopez,60,Female,Diabetes,Endocrinology Ward,2,2026-03-04,2026-03-10,Dr. Neha Gupta
+P000088,Riya Garcia,32,Male,Cancer,Oncology Ward,4,2026-03-13,2026-04-03,Dr. Samuel Chen
+P000089,Siya Hernandez,44,Male,Cancer,Oncology Ward,4,2026-03-09,2026-03-28,Dr. Meera Iyer
+P000090,Liam Smith,25,Male,Behavioral Issues,Behavioral Health Unit,5,2026-03-03,2026-03-15,Dr. Michael Green
+P000091,Mia Davis,57,Male,Diabetes,Endocrinology Ward,2,2026-02-28,2026-03-04,Dr. Neha Gupta
+P000092,Sai Nair,23,Female,Behavioral Issues,Behavioral Health Unit,5,2026-03-18,2026-03-28,Dr. Michael Green
+P000093,Tara Lopez,23,Male,Anxiety Disorder,Psychiatric Ward,5,2026-04-02,2026-04-08,Dr. Arvind Menon
+P000094,Barbara Wilson,35,Female,Anxiety Disorder,Psychiatric Ward,5,2026-03-21,2026-03-23,Dr. Priya Nair
+P000095,Liam Mehta,59,Male,Cancer,Oncology Ward,4,2026-03-26,2026-04-15,Dr. Meera Iyer
+P000096,Rudra Bose,30,Male,Diabetes,Endocrinology Ward,2,2026-03-12,2026-03-16,Dr. Thomas Wright
+P000097,John Roy,57,Male,Cancer,Oncology Ward,4,2026-04-06,2026-04-25,Dr. Samuel Chen
+P000098,Krishna Davis,51,Male,Cardiology,Cardiac Care Unit,3,2026-03-07,2026-03-12,Dr. Anita Rao
+P000099,Noah Joshi,17,Male,Anxiety Disorder,Psychiatric Ward,5,2026-04-17,2026-04-23,Dr. Priya Nair
+P000100,Navya Kumar,24,Male,Anxiety Disorder,Psychiatric Ward,5,2026-04-15,2026-04-25,Dr. Arvind Menon
+P000101,Vihaan Johnson,51,Male,Anxiety Disorder,Psychiatric Ward,5,2026-04-17,2026-04-26,Dr. Priya Nair
+P000102,Meera Joshi,50,Female,Cancer,Oncology Ward,4,2026-04-20,2026-04-30,Dr. Samuel Chen
+P000103,Meera Gupta,40,Female,Anesthesiology,Surgical Recovery,1,2026-03-11,2026-03-17,Dr. Lakshmi Rao
+P000104,Isabella Williams,13,Male,Behavioral Issues,Behavioral Health Unit,5,2026-04-16,2026-04-22,Dr. Michael Green
+P000105,Sophia Brown,37,Female,Anxiety Disorder,Psychiatric Ward,5,2026-03-30,2026-04-09,Dr. Arvind Menon
+P000106,Saanvi Lopez,35,Female,Diabetes,Endocrinology Ward,2,2026-03-15,2026-03-17,Dr. Neha Gupta
+P000107,Kian Jones,68,Female,Cardiology,Cardiac Care Unit,3,2026-04-18,2026-05-02,Dr. Anita Rao
+P000108,Michael Patel,46,Male,Cardiology,Cardiac Care Unit,3,2026-04-05,2026-04-16,Dr. Anita Rao
+P000109,Susan Menon,63,Male,Diabetes,Endocrinology Ward,2,2026-04-19,2026-04-24,Dr. Neha Gupta
+P000110,Sophia Martinez,34,Female,Diabetes,Endocrinology Ward,2,2026-04-16,2026-04-21,Dr. Neha Gupta
+P000111,Diya Hernandez,38,Female,Cardiology,Cardiac Care Unit,3,2026-04-13,2026-04-17,Dr. Rajesh Kumar
+P000112,Mia Williams,36,Female,Behavioral Issues,Behavioral Health Unit,5,2026-03-25,2026-03-29,Dr. Michael Green
+P000113,Diya Smith,39,Female,Cancer,Oncology Ward,4,2026-03-07,2026-03-25,Dr. Samuel Chen
+P000114,Vivaan Patel,41,Female,Anxiety Disorder,Psychiatric Ward,5,2026-03-06,2026-03-08,Dr. Arvind Menon
+P000115,Oliver Rodriguez,49,Female,Cardiology,Cardiac Care Unit,3,2026-04-12,2026-04-20,Dr. Rajesh Kumar
+P000116,Tara Patel,56,Female,Cancer,Oncology Ward,4,2026-04-02,2026-04-20,Dr. Samuel Chen
+P000117,Kabir Das,35,Female,Cancer,Oncology Ward,4,2026-03-02,2026-03-19,Dr. Meera Iyer
+P000118,Pari Nair,35,Male,Anxiety Disorder,Psychiatric Ward,5,2026-02-27,2026-03-07,Dr. Priya Nair
+P000119,Robert Shah,63,Female,Cancer,Oncology Ward,4,2026-03-14,2026-04-03,Dr. Samuel Chen
+P000120,Kian Nair,64,Female,Diabetes,Endocrinology Ward,2,2026-03-26,2026-03-30,Dr. Thomas Wright
+P000121,Patricia Brown,41,Male,Anesthesiology,Surgical Recovery,1,2026-03-19,2026-03-20,Dr. David Park
+P000122,Charlotte Gupta,45,Male,Cancer,Oncology Ward,4,2026-03-13,2026-03-21,Dr. Meera Iyer
+P000123,Susan Menon,53,Female,Cancer,Oncology Ward,4,2026-04-08,2026-04-28,Dr. Samuel Chen
+P000124,Kiara Reddy,40,Female,Behavioral Issues,Behavioral Health Unit,5,2026-02-26,2026-03-12,Dr. Kavita Joshi
+P000125,Diya Rodriguez,73,Female,Anesthesiology,Surgical Recovery,1,2026-04-02,2026-04-06,Dr. David Park
+P000126,Aadhya Davis,6,Female,Anxiety Disorder,Psychiatric Ward,5,2026-02-27,2026-03-08,Dr. Priya Nair
+P000127,Meera Roy,11,Male,Anxiety Disorder,Psychiatric Ward,5,2026-03-30,2026-04-09,Dr. Arvind Menon
+P000128,Dhruv Miller,17,Female,Anxiety Disorder,Psychiatric Ward,5,2026-04-21,2026-04-29,Dr. Arvind Menon
+P000129,Susan Martinez,77,Female,Cancer,Oncology Ward,4,2026-03-23,2026-04-01,Dr. Meera Iyer
+P000130,David Das,36,Male,Behavioral Issues,Behavioral Health Unit,5,2026-03-21,2026-03-25,Dr. Michael Green
+P000131,Rohan Mehta,17,Male,Behavioral Issues,Behavioral Health Unit,5,2026-03-24,2026-03-28,Dr. Michael Green
+P000132,Barbara Bose,68,Male,Diabetes,Endocrinology Ward,2,2026-03-20,2026-03-28,Dr. Thomas Wright
+P000133,Patricia Miller,39,Female,Behavioral Issues,Behavioral Health Unit,5,2026-04-21,2026-05-02,Dr. Kavita Joshi
+P000134,Elizabeth Menon,13,Male,Behavioral Issues,Behavioral Health Unit,5,2026-04-17,2026-04-26,Dr. Kavita Joshi
+P000135,Barbara Menon,10,Male,Behavioral Issues,Behavioral Health Unit,5,2026-03-04,2026-03-12,Dr. Kavita Joshi
+P000136,Navya Mehta,43,Male,Cardiology,Cardiac Care Unit,3,2026-03-28,2026-04-09,Dr. Anita Rao
+P000137,Sai Brown,23,Male,Behavioral Issues,Behavioral Health Unit,5,2026-02-24,2026-03-06,Dr. Kavita Joshi
+P000138,Patricia Nair,41,Male,Cancer,Oncology Ward,4,2026-02-25,2026-03-16,Dr. Samuel Chen
+P000139,Kabir Patel,30,Female,Cancer,Oncology Ward,4,2026-03-17,2026-04-02,Dr. Samuel Chen
+P000140,Riya Miller,39,Female,Anxiety Disorder,Psychiatric Ward,5,2026-02-28,2026-03-08,Dr. Arvind Menon
+P000141,Kiara Williams,28,Male,Anxiety Disorder,Psychiatric Ward,5,2026-03-10,2026-03-16,Dr. Arvind Menon
+P000142,Charlotte Garcia,87,Male,Cancer,Oncology Ward,4,2026-02-24,2026-03-02,Dr. Samuel Chen
+P000143,Aadhya Rodriguez,46,Female,Anesthesiology,Surgical Recovery,1,2026-03-03,2026-03-08,Dr. David Park
+P000144,Dhruv Brown,35,Male,Anxiety Disorder,Psychiatric Ward,5,2026-03-14,2026-03-18,Dr. Priya Nair
+P000145,Jennifer Verma,14,Female,Anxiety Disorder,Psychiatric Ward,5,2026-04-21,2026-04-30,Dr. Arvind Menon
+P000146,Sai Menon,28,Female,Anxiety Disorder,Psychiatric Ward,5,2026-02-26,2026-03-08,Dr. Arvind Menon
+P000147,Diya Hernandez,66,Female,Cardiology,Cardiac Care Unit,3,2026-03-03,2026-03-14,Dr. Rajesh Kumar
+P000148,Myra Martinez,68,Female,Cardiology,Cardiac Care Unit,3,2026-02-27,2026-03-06,Dr. Rajesh Kumar
+P000149,Isabella Johnson,56,Female,Cancer,Oncology Ward,4,2026-04-23,2026-05-10,Dr. Samuel Chen
+P000150,Zara Roy,43,Female,Diabetes,Endocrinology Ward,2,2026-03-14,2026-03-22,Dr. Thomas Wright
+P000151,Rudra Joshi,47,Male,Cardiology,Cardiac Care Unit,3,2026-04-03,2026-04-15,Dr. Anita Rao
+P000152,Patricia Hernandez,51,Female,Cancer,Oncology Ward,4,2026-04-15,2026-04-23,Dr. Meera Iyer
+P000153,Saanvi Joshi,45,Female,Cardiology,Cardiac Care Unit,3,2026-02-26,2026-03-05,Dr. Anita Rao
+P000154,Navya Garcia,42,Male,Behavioral Issues,Behavioral Health Unit,5,2026-03-17,2026-03-26,Dr. Kavita Joshi
+P000155,Jennifer Gupta,18,Female,Anesthesiology,Surgical Recovery,1,2026-04-21,2026-04-24,Dr. David Park
+P000156,Aisha Iyer,21,Male,Anesthesiology,Surgical Recovery,1,2026-03-11,2026-03-12,Dr. David Park
+P000157,Jennifer Roy,56,Female,Cardiology,Cardiac Care Unit,3,2026-04-18,2026-04-29,Dr. Anita Rao
+P000158,Richard Sharma,92,Female,Cardiology,Cardiac Care Unit,3,2026-04-08,2026-04-17,Dr. Anita Rao
+P000159,Kian Patel,26,Female,Anesthesiology,Surgical Recovery,1,2026-02-27,2026-03-06,Dr. Lakshmi Rao
+P000160,Rohan Martinez,8,Male,Behavioral Issues,Behavioral Health Unit,5,2026-02-28,2026-03-07,Dr. Kavita Joshi
+P000161,Robert Nair,38,Female,Anesthesiology,Surgical Recovery,1,2026-03-12,2026-03-13,Dr. Lakshmi Rao
+P000162,Anika Martinez,42,Male,Anesthesiology,Surgical Recovery,1,2026-04-20,2026-04-23,Dr. Lakshmi Rao
+P000163,John Gupta,43,Female,Anesthesiology,Surgical Recovery,1,2026-03-26,2026-03-30,Dr. David Park
+P000164,Reyansh Shah,62,Female,Cancer,Oncology Ward,4,2026-04-04,2026-04-25,Dr. Samuel Chen
+P000165,Vivaan Verma,33,Female,Behavioral Issues,Behavioral Health Unit,5,2026-03-11,2026-03-20,Dr. Kavita Joshi
+P000166,Aisha Patel,28,Female,Behavioral Issues,Behavioral Health Unit,5,2026-04-14,2026-04-26,Dr. Kavita Joshi
+P000167,Mary Jones,50,Male,Diabetes,Endocrinology Ward,2,2026-04-03,2026-04-10,Dr. Thomas Wright
+P000168,John Menon,52,Female,Cancer,Oncology Ward,4,2026-02-28,2026-03-08,Dr. Meera Iyer
+P000169,Rudra Mehta,31,Male,Anxiety Disorder,Psychiatric Ward,5,2026-03-29,2026-04-07,Dr. Arvind Menon
+P000170,Pari Mehta,34,Female,Anxiety Disorder,Psychiatric Ward,5,2026-04-19,2026-04-28,Dr. Priya Nair
+P000171,Sai Mehta,91,Female,Cardiology,Cardiac Care Unit,3,2026-03-03,2026-03-12,Dr. Anita Rao
+P000172,David Johnson,45,Female,Diabetes,Endocrinology Ward,2,2026-03-12,2026-03-20,Dr. Thomas Wright
+P000173,Liam Verma,27,Female,Behavioral Issues,Behavioral Health Unit,5,2026-04-17,2026-04-25,Dr. Kavita Joshi
+P000174,Meera Iyer,31,Male,Anesthesiology,Surgical Recovery,1,2026-02-28,2026-03-03,Dr. David Park
+P000175,Diya Williams,21,Male,Anxiety Disorder,Psychiatric Ward,5,2026-04-22,2026-05-02,Dr. Arvind Menon
+P000176,Diya Miller,53,Male,Anesthesiology,Surgical Recovery,1,2026-04-01,2026-04-04,Dr. Lakshmi Rao
+P000177,Rohan Williams,72,Male,Diabetes,Endocrinology Ward,2,2026-04-18,2026-04-20,Dr. Neha Gupta
+P000178,Zara Das,70,Male,Cardiology,Cardiac Care Unit,3,2026-03-08,2026-03-16,Dr. Rajesh Kumar
+P000179,William Brown,68,Female,Cardiology,Cardiac Care Unit,3,2026-04-20,2026-05-03,Dr. Anita Rao
+P000180,Linda Mehta,60,Male,Cancer,Oncology Ward,4,2026-03-28,2026-04-16,Dr. Samuel Chen
+P000181,James Gupta,48,Male,Anxiety Disorder,Psychiatric Ward,5,2026-03-21,2026-03-30,Dr. Arvind Menon
+P000182,Ira Brown,73,Male,Cardiology,Cardiac Care Unit,3,2026-04-04,2026-04-11,Dr. Anita Rao
+P000183,Oliver Nair,45,Female,Anxiety Disorder,Psychiatric Ward,5,2026-04-12,2026-04-20,Dr. Priya Nair
+P000184,Susan Iyer,70,Male,Cancer,Oncology Ward,4,2026-04-19,2026-05-05,Dr. Samuel Chen
+P000185,Aditya Mehta,83,Female,Cardiology,Cardiac Care Unit,3,2026-03-27,2026-04-09,Dr. Rajesh Kumar
+P000186,Siya Menon,50,Female,Cardiology,Cardiac Care Unit,3,2026-04-03,2026-04-07,Dr. Anita Rao
+P000187,Mary Shah,50,Female,Anesthesiology,Surgical Recovery,1,2026-04-17,2026-04-24,Dr. Lakshmi Rao
+P000188,Ira Smith,59,Male,Cardiology,Cardiac Care Unit,3,2026-03-07,2026-03-15,Dr. Rajesh Kumar
+P000189,Emma Kumar,52,Male,Cardiology,Cardiac Care Unit,3,2026-02-25,2026-03-04,Dr. Rajesh Kumar
+P000190,Mia Jones,31,Male,Anesthesiology,Surgical Recovery,1,2026-04-17,2026-04-19,Dr. Lakshmi Rao
+P000191,Ayaan Brown,62,Male,Cardiology,Cardiac Care Unit,3,2026-03-23,2026-04-06,Dr. Rajesh Kumar
+P000192,Oliver Williams,52,Female,Cancer,Oncology Ward,4,2026-02-27,2026-03-14,Dr. Samuel Chen
+P000193,Arjun Joshi,54,Male,Cancer,Oncology Ward,4,2026-04-01,2026-04-07,Dr. Meera Iyer
+P000194,Aisha Verma,71,Male,Cardiology,Cardiac Care Unit,3,2026-04-19,2026-04-27,Dr. Anita Rao
+P000195,James Bose,32,Female,Cancer,Oncology Ward,4,2026-03-26,2026-04-01,Dr. Meera Iyer
+P000196,Meera Smith,54,Male,Cardiology,Cardiac Care Unit,3,2026-03-26,2026-03-30,Dr. Anita Rao
+P000197,Charlotte Das,13,Female,Behavioral Issues,Behavioral Health Unit,5,2026-03-13,2026-03-24,Dr. Kavita Joshi
+P000198,Susan Shah,41,Male,Behavioral Issues,Behavioral Health Unit,5,2026-03-15,2026-03-26,Dr. Kavita Joshi
+P000199,Aadhya Bose,47,Male,Cancer,Oncology Ward,4,2026-04-19,2026-05-04,Dr. Samuel Chen
+P000200,Elizabeth Bose,48,Male,Anxiety Disorder,Psychiatric Ward,5,2026-04-02,2026-04-06,Dr. Priya Nair
+P000201,Rohan Roy,25,Female,Anxiety Disorder,Psychiatric Ward,5,2026-03-16,2026-03-20,Dr. Priya Nair
+P000202,Kiara Jones,26,Male,Anesthesiology,Surgical Recovery,1,2026-04-15,2026-04-22,Dr. Lakshmi Rao
+P000203,Riya Smith,51,Female,Cancer,Oncology Ward,4,2026-04-02,2026-04-13,Dr. Samuel Chen
+P000204,Ishaan Singh,67,Male,Cardiology,Cardiac Care Unit,3,2026-03-22,2026-03-27,Dr. Anita Rao
+P000205,Emma Brown,56,Female,Cardiology,Cardiac Care Unit,3,2026-03-03,2026-03-16,Dr. Anita Rao
+P000206,Aditya Mehta,64,Female,Cancer,Oncology Ward,4,2026-03-26,2026-04-07,Dr. Samuel Chen
+P000207,Sophia Shah,37,Female,Anxiety Disorder,Psychiatric Ward,5,2026-02-25,2026-03-06,Dr. Priya Nair
+P000208,William Shah,92,Male,Cancer,Oncology Ward,4,2026-03-05,2026-03-19,Dr. Samuel Chen
+P000209,Siya Kumar,47,Female,Anesthesiology,Surgical Recovery,1,2026-04-20,2026-04-23,Dr. David Park
+P000210,Michael Gupta,44,Female,Diabetes,Endocrinology Ward,2,2026-02-28,2026-03-06,Dr. Neha Gupta
+P000211,Oliver Kumar,40,Male,Anxiety Disorder,Psychiatric Ward,5,2026-04-18,2026-04-26,Dr. Priya Nair
+P000212,Anika Sharma,53,Female,Cancer,Oncology Ward,4,2026-03-22,2026-04-08,Dr. Samuel Chen
+P000213,Sai Roy,32,Male,Anxiety Disorder,Psychiatric Ward,5,2026-03-04,2026-03-11,Dr. Priya Nair
+P000214,Aadhya Hernandez,64,Male,Cancer,Oncology Ward,4,2026-03-06,2026-03-15,Dr. Samuel Chen
+P000215,Aarav Wilson,61,Male,Cardiology,Cardiac Care Unit,3,2026-02-22,2026-03-06,Dr. Rajesh Kumar
+P000216,Aadhya Iyer,57,Male,Anxiety Disorder,Psychiatric Ward,5,2026-04-08,2026-04-10,Dr. Arvind Menon
+P000217,Mary Shah,69,Female,Cardiology,Cardiac Care Unit,3,2026-04-22,2026-05-04,Dr. Anita Rao
+P000218,Aadhya Mehta,49,Female,Cardiology,Cardiac Care Unit,3,2026-04-08,2026-04-17,Dr. Rajesh Kumar
+P000219,Linda Patel,34,Male,Cancer,Oncology Ward,4,2026-03-04,2026-03-25,Dr. Meera Iyer
+P000220,Meera Verma,78,Male,Diabetes,Endocrinology Ward,2,2026-04-07,2026-04-11,Dr. Neha Gupta
+P000221,Arjun Roy,31,Male,Anxiety Disorder,Psychiatric Ward,5,2026-04-15,2026-04-22,Dr. Priya Nair
+P000222,Myra Hernandez,46,Male,Diabetes,Endocrinology Ward,2,2026-03-05,2026-03-13,Dr. Thomas Wright
+P000223,Meera Jones,74,Female,Cardiology,Cardiac Care Unit,3,2026-04-21,2026-05-02,Dr. Rajesh Kumar
+P000224,Sophia Reddy,28,Male,Behavioral Issues,Behavioral Health Unit,5,2026-03-22,2026-03-29,Dr. Michael Green
+P000225,Robert Joshi,49,Female,Anxiety Disorder,Psychiatric Ward,5,2026-04-05,2026-04-10,Dr. Arvind Menon
+P000226,Vihaan Lopez,48,Female,Diabetes,Endocrinology Ward,2,2026-02-26,2026-03-03,Dr. Thomas Wright
+P000227,Kiara Das,39,Female,Behavioral Issues,Behavioral Health Unit,5,2026-03-23,2026-04-06,Dr. Michael Green
+P000228,John Nair,71,Female,Anesthesiology,Surgical Recovery,1,2026-03-27,2026-04-02,Dr. Lakshmi Rao
+P000229,Mia Kumar,49,Male,Diabetes,Endocrinology Ward,2,2026-04-05,2026-04-12,Dr. Thomas Wright
+P000230,Susan Mehta,66,Male,Cardiology,Cardiac Care Unit,3,2026-04-01,2026-04-12,Dr. Rajesh Kumar
+P000231,Anika Brown,25,Male,Behavioral Issues,Behavioral Health Unit,5,2026-03-04,2026-03-17,Dr. Kavita Joshi
+P000232,Patricia Bose,65,Male,Cancer,Oncology Ward,4,2026-04-14,2026-04-19,Dr. Samuel Chen
+P000233,Arjun Iyer,23,Male,Anesthesiology,Surgical Recovery,1,2026-03-31,2026-04-03,Dr. David Park
+P000234,Aditya Brown,51,Female,Cardiology,Cardiac Care Unit,3,2026-03-06,2026-03-17,Dr. Anita Rao
+P000235,John Roy,62,Female,Cancer,Oncology Ward,4,2026-04-08,2026-04-21,Dr. Meera Iyer
+P000236,Ayaan Joshi,64,Male,Cancer,Oncology Ward,4,2026-03-09,2026-03-22,Dr. Samuel Chen
+P000237,Mary Menon,48,Male,Diabetes,Endocrinology Ward,2,2026-04-11,2026-04-16,Dr. Neha Gupta
+P000238,Arjun Shah,52,Male,Cardiology,Cardiac Care Unit,3,2026-02-28,2026-03-14,Dr. Rajesh Kumar
+P000239,Susan Patel,6,Female,Diabetes,Endocrinology Ward,2,2026-02-25,2026-03-01,Dr. Thomas Wright
+P000240,Susan Miller,19,Female,Behavioral Issues,Behavioral Health Unit,5,2026-03-22,2026-03-30,Dr. Kavita Joshi
+P000241,Dhruv Martinez,62,Male,Cardiology,Cardiac Care Unit,3,2026-03-18,2026-03-30,Dr. Rajesh Kumar
+P000242,Michael Singh,48,Male,Diabetes,Endocrinology Ward,2,2026-04-19,2026-04-21,Dr. Thomas Wright
+P000243,Susan Davis,44,Male,Cancer,Oncology Ward,4,2026-04-15,2026-04-22,Dr. Samuel Chen
+P000244,Aisha Shah,59,Female,Diabetes,Endocrinology Ward,2,2026-04-15,2026-04-19,Dr. Neha Gupta
+P000245,Ishaan Mehta,77,Female,Cancer,Oncology Ward,4,2026-04-14,2026-05-05,Dr. Samuel Chen
+P000246,Pari Miller,18,Male,Anxiety Disorder,Psychiatric Ward,5,2026-02-25,2026-03-07,Dr. Arvind Menon
+P000247,Ananya Reddy,45,Female,Diabetes,Endocrinology Ward,2,2026-03-15,2026-03-19,Dr. Neha Gupta
+P000248,Kabir Williams,17,Female,Behavioral Issues,Behavioral Health Unit,5,2026-03-12,2026-03-17,Dr. Michael Green
+P000249,William Verma,42,Female,Anesthesiology,Surgical Recovery,1,2026-04-18,2026-04-19,Dr. Lakshmi Rao
+P000250,Emma Williams,38,Female,Anxiety Disorder,Psychiatric Ward,5,2026-03-23,2026-03-25,Dr. Arvind Menon
+P000251,Saanvi Joshi,50,Female,Anxiety Disorder,Psychiatric Ward,5,2026-04-04,2026-04-12,Dr. Arvind Menon
+P000252,Vihaan Kumar,47,Male,Cancer,Oncology Ward,4,2026-04-03,2026-04-12,Dr. Samuel Chen
+P000253,Anika Bose,62,Female,Cardiology,Cardiac Care Unit,3,2026-03-22,2026-03-31,Dr. Anita Rao
+P000254,Zara Gupta,35,Male,Anxiety Disorder,Psychiatric Ward,5,2026-02-22,2026-02-28,Dr. Arvind Menon
+P000255,Siya Iyer,18,Female,Behavioral Issues,Behavioral Health Unit,5,2026-02-23,2026-03-03,Dr. Michael Green
+P000256,Kabir Joshi,37,Male,Behavioral Issues,Behavioral Health Unit,5,2026-02-26,2026-03-08,Dr. Michael Green
+P000257,Sai Bose,64,Female,Cancer,Oncology Ward,4,2026-04-10,2026-04-22,Dr. Samuel Chen
+P000258,Aadhya Joshi,63,Male,Diabetes,Endocrinology Ward,2,2026-03-20,2026-03-24,Dr. Neha Gupta
+P000259,Riya Singh,31,Female,Behavioral Issues,Behavioral Health Unit,5,2026-03-31,2026-04-09,Dr. Kavita Joshi
+P000260,William Johnson,47,Male,Cardiology,Cardiac Care Unit,3,2026-04-05,2026-04-17,Dr. Anita Rao
+P000261,Aisha Rodriguez,60,Male,Diabetes,Endocrinology Ward,2,2026-04-16,2026-04-22,Dr. Neha Gupta
+P000262,Ira Roy,26,Female,Anesthesiology,Surgical Recovery,1,2026-03-19,2026-03-22,Dr. David Park
+P000263,Dhruv Brown,53,Female,Cancer,Oncology Ward,4,2026-03-09,2026-03-18,Dr. Samuel Chen
+P000264,John Shah,61,Female,Cardiology,Cardiac Care Unit,3,2026-04-15,2026-04-27,Dr. Rajesh Kumar
+P000265,Pari Kumar,36,Female,Cancer,Oncology Ward,4,2026-03-22,2026-04-06,Dr. Samuel Chen
+P000266,Saanvi Joshi,25,Female,Anesthesiology,Surgical Recovery,1,2026-04-02,2026-04-05,Dr. Lakshmi Rao
+P000267,David Menon,41,Female,Anesthesiology,Surgical Recovery,1,2026-03-16,2026-03-17,Dr. David Park
+P000268,Jennifer Martinez,45,Male,Behavioral Issues,Behavioral Health Unit,5,2026-04-09,2026-04-21,Dr. Kavita Joshi
+P000269,Kabir Smith,30,Female,Diabetes,Endocrinology Ward,2,2026-03-05,2026-03-11,Dr. Thomas Wright
+P000270,Elizabeth Iyer,67,Male,Cardiology,Cardiac Care Unit,3,2026-03-26,2026-03-30,Dr. Rajesh Kumar
+P000271,Siya Miller,60,Male,Cardiology,Cardiac Care Unit,3,2026-03-05,2026-03-17,Dr. Rajesh Kumar
+P000272,Noah Davis,67,Female,Cardiology,Cardiac Care Unit,3,2026-03-12,2026-03-21,Dr. Rajesh Kumar
+P000273,Pari Kumar,65,Female,Cancer,Oncology Ward,4,2026-03-20,2026-04-04,Dr. Samuel Chen
+P000274,Liam Garcia,45,Female,Diabetes,Endocrinology Ward,2,2026-04-08,2026-04-11,Dr. Thomas Wright
+P000275,Rudra Menon,25,Female,Anesthesiology,Surgical Recovery,1,2026-04-10,2026-04-16,Dr. David Park
+P000276,Anika Johnson,25,Male,Behavioral Issues,Behavioral Health Unit,5,2026-04-16,2026-04-23,Dr. Michael Green
+P000277,Ira Hernandez,35,Female,Anxiety Disorder,Psychiatric Ward,5,2026-04-05,2026-04-07,Dr. Priya Nair
+P000278,Aisha Jones,28,Male,Anxiety Disorder,Psychiatric Ward,5,2026-04-10,2026-04-19,Dr. Priya Nair
+P000279,Diya Johnson,64,Female,Diabetes,Endocrinology Ward,2,2026-04-08,2026-04-14,Dr. Neha Gupta
+P000280,John Iyer,66,Male,Diabetes,Endocrinology Ward,2,2026-04-17,2026-04-19,Dr. Thomas Wright
+P000281,Meera Gupta,75,Male,Diabetes,Endocrinology Ward,2,2026-03-28,2026-03-31,Dr. Thomas Wright
+P000282,Dhruv Rodriguez,28,Male,Behavioral Issues,Behavioral Health Unit,5,2026-03-13,2026-03-20,Dr. Kavita Joshi
+P000283,Sai Jones,79,Female,Diabetes,Endocrinology Ward,2,2026-03-07,2026-03-13,Dr. Neha Gupta
+P000284,Ayaan Mehta,19,Female,Behavioral Issues,Behavioral Health Unit,5,2026-03-01,2026-03-04,Dr. Michael Green
+P000285,Ayaan Davis,26,Female,Behavioral Issues,Behavioral Health Unit,5,2026-04-23,2026-04-26,Dr. Michael Green
+P000286,Reyansh Das,49,Female,Anxiety Disorder,Psychiatric Ward,5,2026-02-26,2026-03-07,Dr. Priya Nair
+P000287,Zara Nair,60,Female,Cardiology,Cardiac Care Unit,3,2026-04-02,2026-04-07,Dr. Anita Rao
+P000288,Jennifer Nair,64,Female,Diabetes,Endocrinology Ward,2,2026-03-18,2026-03-22,Dr. Neha Gupta
+P000289,Patricia Wilson,59,Male,Cancer,Oncology Ward,4,2026-03-22,2026-04-09,Dr. Samuel Chen
+P000290,Linda Gupta,68,Male,Cardiology,Cardiac Care Unit,3,2026-04-23,2026-04-30,Dr. Rajesh Kumar
+P000291,Aisha Rodriguez,43,Male,Anxiety Disorder,Psychiatric Ward,5,2026-04-04,2026-04-11,Dr. Priya Nair
+P000292,Navya Miller,28,Male,Anxiety Disorder,Psychiatric Ward,5,2026-03-29,2026-04-02,Dr. Arvind Menon
+P000293,Patricia Menon,43,Female,Cancer,Oncology Ward,4,2026-04-09,2026-04-21,Dr. Meera Iyer
+P000294,Zara Davis,31,Male,Behavioral Issues,Behavioral Health Unit,5,2026-03-10,2026-03-19,Dr. Michael Green
+P000295,Isabella Garcia,46,Female,Anesthesiology,Surgical Recovery,1,2026-02-27,2026-03-04,Dr. Lakshmi Rao
+P000296,John Miller,35,Female,Cancer,Oncology Ward,4,2026-04-20,2026-04-28,Dr. Meera Iyer
+P000297,Rohan Kumar,29,Female,Anxiety Disorder,Psychiatric Ward,5,2026-03-09,2026-03-14,Dr. Arvind Menon
+P000298,James Shah,44,Male,Anesthesiology,Surgical Recovery,1,2026-04-15,2026-04-19,Dr. David Park
+P000299,Vihaan Johnson,66,Male,Cancer,Oncology Ward,4,2026-04-07,2026-04-24,Dr. Meera Iyer
+P000300,David Patel,43,Female,Cardiology,Cardiac Care Unit,3,2026-03-10,2026-03-19,Dr. Anita Rao
+P000301,Vihaan Wilson,64,Female,Cardiology,Cardiac Care Unit,3,2026-04-12,2026-04-22,Dr. Anita Rao
+P000302,Liam Jones,31,Female,Behavioral Issues,Behavioral Health Unit,5,2026-03-26,2026-04-04,Dr. Michael Green
+P000303,Elizabeth Garcia,16,Male,Behavioral Issues,Behavioral Health Unit,5,2026-02-27,2026-03-12,Dr. Michael Green
+P000304,Robert Bose,56,Male,Cancer,Oncology Ward,4,2026-03-01,2026-03-13,Dr. Meera Iyer
+P000305,Saanvi Shah,35,Female,Diabetes,Endocrinology Ward,2,2026-04-09,2026-04-17,Dr. Neha Gupta
+P000306,Rohan Nair,57,Male,Cardiology,Cardiac Care Unit,3,2026-04-21,2026-04-26,Dr. Rajesh Kumar
+P000307,Vivaan Iyer,64,Female,Cardiology,Cardiac Care Unit,3,2026-03-11,2026-03-24,Dr. Anita Rao
+P000308,Aditya Bose,60,Male,Cancer,Oncology Ward,4,2026-03-06,2026-03-17,Dr. Meera Iyer
+P000309,Aadhya Iyer,43,Male,Anesthesiology,Surgical Recovery,1,2026-03-05,2026-03-10,Dr. David Park
+P000310,Rohan Garcia,44,Male,Cancer,Oncology Ward,4,2026-04-04,2026-04-22,Dr. Samuel Chen
+P000311,David Wilson,55,Male,Anesthesiology,Surgical Recovery,1,2026-03-23,2026-03-28,Dr. Lakshmi Rao
+P000312,Jennifer Garcia,78,Female,Cancer,Oncology Ward,4,2026-04-03,2026-04-24,Dr. Samuel Chen
+P000313,Saanvi Bose,53,Male,Cardiology,Cardiac Care Unit,3,2026-04-04,2026-04-11,Dr. Anita Rao
+P000314,Vihaan Johnson,55,Female,Cancer,Oncology Ward,4,2026-03-19,2026-04-06,Dr. Meera Iyer
+P000315,Ananya Reddy,46,Male,Anxiety Disorder,Psychiatric Ward,5,2026-04-18,2026-04-25,Dr. Priya Nair
+P000316,Kiara Garcia,59,Male,Diabetes,Endocrinology Ward,2,2026-02-27,2026-03-01,Dr. Neha Gupta
+P000317,Oliver Williams,29,Male,Anesthesiology,Surgical Recovery,1,2026-02-24,2026-03-03,Dr. David Park
+P000318,Aarav Reddy,15,Male,Behavioral Issues,Behavioral Health Unit,5,2026-03-06,2026-03-20,Dr. Michael Green
+P000319,Barbara Brown,46,Female,Diabetes,Endocrinology Ward,2,2026-02-24,2026-03-01,Dr. Neha Gupta
+P000320,Emma Menon,44,Female,Cancer,Oncology Ward,4,2026-03-31,2026-04-13,Dr. Samuel Chen
+P000321,Isabella Davis,55,Male,Cancer,Oncology Ward,4,2026-02-24,2026-03-11,Dr. Meera Iyer
+P000322,Siya Verma,53,Male,Diabetes,Endocrinology Ward,2,2026-03-19,2026-03-23,Dr. Thomas Wright
+P000323,Dhruv Das,41,Male,Anxiety Disorder,Psychiatric Ward,5,2026-03-23,2026-03-28,Dr. Arvind Menon
+P000324,Mia Joshi,39,Male,Behavioral Issues,Behavioral Health Unit,5,2026-04-13,2026-04-23,Dr. Michael Green
+P000325,Liam Johnson,74,Male,Cancer,Oncology Ward,4,2026-03-21,2026-03-27,Dr. Meera Iyer
+P000326,Arjun Hernandez,43,Female,Diabetes,Endocrinology Ward,2,2026-04-23,2026-05-01,Dr. Thomas Wright
+P000327,Patricia Iyer,66,Male,Cardiology,Cardiac Care Unit,3,2026-03-31,2026-04-11,Dr. Anita Rao
+P000328,Linda Brown,39,Female,Behavioral Issues,Behavioral Health Unit,5,2026-04-23,2026-04-26,Dr. Michael Green
+P000329,John Davis,41,Male,Anxiety Disorder,Psychiatric Ward,5,2026-04-22,2026-04-28,Dr. Arvind Menon
+P000330,Ayaan Gupta,41,Female,Behavioral Issues,Behavioral Health Unit,5,2026-04-08,2026-04-13,Dr. Kavita Joshi
+P000331,Ananya Hernandez,36,Female,Anxiety Disorder,Psychiatric Ward,5,2026-03-25,2026-04-02,Dr. Priya Nair
+P000332,Rudra Menon,46,Female,Diabetes,Endocrinology Ward,2,2026-04-18,2026-04-26,Dr. Neha Gupta
+P000333,Kiara Bose,53,Male,Diabetes,Endocrinology Ward,2,2026-04-18,2026-04-21,Dr. Thomas Wright
+P000334,Jennifer Martinez,35,Female,Anxiety Disorder,Psychiatric Ward,5,2026-02-25,2026-02-28,Dr. Priya Nair
+P000335,Barbara Wilson,47,Male,Diabetes,Endocrinology Ward,2,2026-02-23,2026-03-02,Dr. Thomas Wright
+P000336,William Garcia,89,Female,Cardiology,Cardiac Care Unit,3,2026-04-22,2026-05-01,Dr. Anita Rao
+P000337,Oliver Hernandez,47,Female,Diabetes,Endocrinology Ward,2,2026-03-18,2026-03-21,Dr. Neha Gupta
+P000338,Kiara Garcia,29,Female,Behavioral Issues,Behavioral Health Unit,5,2026-03-06,2026-03-15,Dr. Kavita Joshi
+P000339,Barbara Davis,64,Female,Cardiology,Cardiac Care Unit,3,2026-04-20,2026-04-29,Dr. Anita Rao
+P000340,Charlotte Patel,38,Male,Anxiety Disorder,Psychiatric Ward,5,2026-03-05,2026-03-13,Dr. Arvind Menon
+P000341,Diya Martinez,39,Male,Behavioral Issues,Behavioral Health Unit,5,2026-04-01,2026-04-07,Dr. Michael Green
+P000342,Elizabeth Williams,17,Male,Diabetes,Endocrinology Ward,2,2026-03-05,2026-03-07,Dr. Thomas Wright
+P000343,Susan Patel,72,Female,Cardiology,Cardiac Care Unit,3,2026-04-14,2026-04-28,Dr. Rajesh Kumar
+P000344,Reyansh Patel,77,Male,Cardiology,Cardiac Care Unit,3,2026-03-26,2026-04-03,Dr. Rajesh Kumar
+P000345,Reyansh Singh,48,Female,Cardiology,Cardiac Care Unit,3,2026-03-28,2026-04-09,Dr. Anita Rao
+P000346,Anika Johnson,68,Male,Cardiology,Cardiac Care Unit,3,2026-03-04,2026-03-17,Dr. Rajesh Kumar
+P000347,Aarav Menon,62,Female,Cancer,Oncology Ward,4,2026-03-18,2026-03-30,Dr. Meera Iyer
+P000348,Kabir Singh,16,Female,Anxiety Disorder,Psychiatric Ward,5,2026-03-23,2026-03-29,Dr. Priya Nair
+P000349,Riya Nair,52,Male,Cancer,Oncology Ward,4,2026-02-22,2026-03-07,Dr. Meera Iyer
+P000350,Tara Brown,52,Female,Diabetes,Endocrinology Ward,2,2026-04-17,2026-04-22,Dr. Neha Gupta
+P000351,Ira Das,23,Male,Anesthesiology,Surgical Recovery,1,2026-04-02,2026-04-06,Dr. David Park
+P000352,Jennifer Brown,78,Female,Cardiology,Cardiac Care Unit,3,2026-03-16,2026-03-25,Dr. Anita Rao
+P000353,Ayaan Bose,26,Male,Behavioral Issues,Behavioral Health Unit,5,2026-03-10,2026-03-24,Dr. Michael Green
+P000354,Sophia Iyer,31,Female,Anxiety Disorder,Psychiatric Ward,5,2026-04-16,2026-04-23,Dr. Priya Nair
+P000355,Robert Kumar,76,Female,Diabetes,Endocrinology Ward,2,2026-04-22,2026-04-28,Dr. Thomas Wright
+P000356,Kian Shah,47,Female,Anesthesiology,Surgical Recovery,1,2026-03-04,2026-03-11,Dr. David Park
+P000357,Ishaan Jones,31,Female,Anxiety Disorder,Psychiatric Ward,5,2026-03-12,2026-03-18,Dr. Priya Nair
+P000358,Sophia Bose,75,Female,Cardiology,Cardiac Care Unit,3,2026-03-20,2026-03-30,Dr. Rajesh Kumar
+P000359,Sophia Roy,51,Female,Diabetes,Endocrinology Ward,2,2026-03-20,2026-03-28,Dr. Neha Gupta
+P000360,Aryan Garcia,61,Male,Diabetes,Endocrinology Ward,2,2026-03-13,2026-03-19,Dr. Thomas Wright
+P000361,Myra Martinez,75,Female,Cancer,Oncology Ward,4,2026-04-17,2026-04-22,Dr. Samuel Chen
+P000362,Noah Smith,48,Male,Diabetes,Endocrinology Ward,2,2026-03-29,2026-04-02,Dr. Thomas Wright
+P000363,David Miller,48,Female,Cancer,Oncology Ward,4,2026-04-22,2026-05-08,Dr. Samuel Chen
+P000364,Siya Patel,68,Male,Cardiology,Cardiac Care Unit,3,2026-04-02,2026-04-10,Dr. Rajesh Kumar
+P000365,John Joshi,32,Female,Anxiety Disorder,Psychiatric Ward,5,2026-03-26,2026-03-29,Dr. Arvind Menon
+P000366,Saanvi Verma,66,Male,Anesthesiology,Surgical Recovery,1,2026-04-17,2026-04-23,Dr. Lakshmi Rao
+P000367,Noah Iyer,77,Female,Cancer,Oncology Ward,4,2026-04-02,2026-04-12,Dr. Samuel Chen
+P000368,Rudra Martinez,66,Female,Cancer,Oncology Ward,4,2026-03-29,2026-04-16,Dr. Meera Iyer
+P000369,Dhruv Shah,70,Female,Diabetes,Endocrinology Ward,2,2026-04-23,2026-04-28,Dr. Neha Gupta
+P000370,Oliver Miller,51,Male,Anesthesiology,Surgical Recovery,1,2026-03-20,2026-03-27,Dr. Lakshmi Rao
+P000371,Dhruv Shah,64,Male,Cardiology,Cardiac Care Unit,3,2026-02-27,2026-03-13,Dr. Rajesh Kumar
+P000372,Patricia Das,37,Female,Diabetes,Endocrinology Ward,2,2026-04-01,2026-04-05,Dr. Thomas Wright
+P000373,Mia Garcia,40,Female,Diabetes,Endocrinology Ward,2,2026-02-24,2026-02-28,Dr. Neha Gupta
+P000374,Pari Gupta,43,Female,Anxiety Disorder,Psychiatric Ward,5,2026-03-22,2026-03-26,Dr. Arvind Menon
+P000375,Ishaan Williams,67,Male,Cancer,Oncology Ward,4,2026-03-23,2026-04-02,Dr. Meera Iyer
+P000376,Tara Menon,56,Female,Cardiology,Cardiac Care Unit,3,2026-02-27,2026-03-03,Dr. Rajesh Kumar
+P000377,Tara Singh,74,Female,Cardiology,Cardiac Care Unit,3,2026-03-19,2026-03-29,Dr. Rajesh Kumar
+P000378,Tara Mehta,44,Male,Diabetes,Endocrinology Ward,2,2026-04-22,2026-04-28,Dr. Neha Gupta
+P000379,Diya Iyer,61,Male,Cancer,Oncology Ward,4,2026-03-05,2026-03-15,Dr. Samuel Chen
+P000380,Emma Rodriguez,38,Female,Cancer,Oncology Ward,4,2026-03-05,2026-03-18,Dr. Samuel Chen
+P000381,Oliver Verma,43,Female,Anesthesiology,Surgical Recovery,1,2026-03-20,2026-03-24,Dr. Lakshmi Rao
+P000382,Reyansh Davis,45,Female,Anesthesiology,Surgical Recovery,1,2026-03-26,2026-03-27,Dr. David Park
+P000383,Mia Patel,45,Male,Cancer,Oncology Ward,4,2026-03-05,2026-03-13,Dr. Meera Iyer
+P000384,Noah Williams,64,Male,Diabetes,Endocrinology Ward,2,2026-04-13,2026-04-18,Dr. Neha Gupta
+P000385,Mia Reddy,29,Female,Anesthesiology,Surgical Recovery,1,2026-04-01,2026-04-06,Dr. David Park
+P000386,Kabir Das,26,Female,Behavioral Issues,Behavioral Health Unit,5,2026-03-18,2026-03-25,Dr. Michael Green
+P000387,James Wilson,81,Female,Diabetes,Endocrinology Ward,2,2026-03-28,2026-04-05,Dr. Neha Gupta
+P000388,Jennifer Singh,72,Female,Diabetes,Endocrinology Ward,2,2026-04-08,2026-04-11,Dr. Neha Gupta
+P000389,Charlotte Iyer,37,Female,Anesthesiology,Surgical Recovery,1,2026-03-14,2026-03-19,Dr. David Park
+P000390,Kiara Shah,49,Female,Cardiology,Cardiac Care Unit,3,2026-03-29,2026-04-03,Dr. Rajesh Kumar
+P000391,Navya Shah,28,Female,Behavioral Issues,Behavioral Health Unit,5,2026-04-23,2026-05-05,Dr. Kavita Joshi
+P000392,Zara Jones,48,Female,Diabetes,Endocrinology Ward,2,2026-03-29,2026-04-04,Dr. Neha Gupta
+P000393,Mia Reddy,62,Female,Cancer,Oncology Ward,4,2026-03-01,2026-03-16,Dr. Samuel Chen
+P000394,William Singh,39,Male,Diabetes,Endocrinology Ward,2,2026-03-06,2026-03-13,Dr. Neha Gupta
+P000395,Patricia Martinez,46,Male,Anesthesiology,Surgical Recovery,1,2026-04-16,2026-04-17,Dr. Lakshmi Rao
+P000396,Aarav Mehta,59,Male,Cardiology,Cardiac Care Unit,3,2026-04-04,2026-04-18,Dr. Anita Rao
+P000397,Diya Patel,45,Female,Diabetes,Endocrinology Ward,2,2026-04-18,2026-04-22,Dr. Thomas Wright
+P000398,Jennifer Kumar,48,Female,Cardiology,Cardiac Care Unit,3,2026-03-27,2026-04-03,Dr. Anita Rao
+P000399,Aarav Reddy,40,Female,Cancer,Oncology Ward,4,2026-03-17,2026-03-26,Dr. Meera Iyer
+P000400,Aisha Sharma,58,Female,Cardiology,Cardiac Care Unit,3,2026-03-10,2026-03-20,Dr. Anita Rao
+P000401,Rudra Bose,67,Male,Cardiology,Cardiac Care Unit,3,2026-04-17,2026-04-22,Dr. Rajesh Kumar
+P000402,Saanvi Singh,69,Male,Cancer,Oncology Ward,4,2026-04-19,2026-04-28,Dr. Meera Iyer
+P000403,Kabir Shah,12,Female,Anxiety Disorder,Psychiatric Ward,5,2026-03-14,2026-03-19,Dr. Priya Nair
+P000404,Mary Garcia,64,Female,Cancer,Oncology Ward,4,2026-03-06,2026-03-15,Dr. Meera Iyer
+P000405,Kiara Roy,28,Female,Behavioral Issues,Behavioral Health Unit,5,2026-04-08,2026-04-13,Dr. Michael Green
+P000406,Aryan Johnson,81,Female,Diabetes,Endocrinology Ward,2,2026-03-16,2026-03-23,Dr. Thomas Wright
+P000407,Barbara Sharma,38,Female,Anesthesiology,Surgical Recovery,1,2026-03-16,2026-03-21,Dr. Lakshmi Rao
+P000408,Aadhya Jones,53,Female,Cardiology,Cardiac Care Unit,3,2026-03-23,2026-03-30,Dr. Rajesh Kumar
+P000409,Tara Jones,13,Male,Diabetes,Endocrinology Ward,2,2026-02-23,2026-02-27,Dr. Thomas Wright
+P000410,Charlotte Williams,50,Male,Cancer,Oncology Ward,4,2026-03-06,2026-03-16,Dr. Samuel Chen
+P000411,Emma Patel,70,Female,Cardiology,Cardiac Care Unit,3,2026-02-23,2026-02-27,Dr. Anita Rao
+P000412,Ira Smith,38,Female,Anxiety Disorder,Psychiatric Ward,5,2026-03-05,2026-03-15,Dr. Arvind Menon
+P000413,Ira Patel,44,Male,Diabetes,Endocrinology Ward,2,2026-04-04,2026-04-06,Dr. Neha Gupta
+P000414,Kian Martinez,60,Female,Cardiology,Cardiac Care Unit,3,2026-03-29,2026-04-07,Dr. Anita Rao
+P000415,Riya Davis,23,Male,Behavioral Issues,Behavioral Health Unit,5,2026-04-08,2026-04-11,Dr. Kavita Joshi
+P000416,Krishna Shah,71,Female,Diabetes,Endocrinology Ward,2,2026-03-07,2026-03-14,Dr. Neha Gupta
+P000417,Susan Singh,59,Male,Diabetes,Endocrinology Ward,2,2026-03-23,2026-03-26,Dr. Thomas Wright
+P000418,Sophia Hernandez,48,Female,Anesthesiology,Surgical Recovery,1,2026-02-27,2026-03-06,Dr. David Park
+P000419,Krishna Rodriguez,29,Female,Behavioral Issues,Behavioral Health Unit,5,2026-04-06,2026-04-15,Dr. Kavita Joshi
+P000420,William Jones,67,Male,Cardiology,Cardiac Care Unit,3,2026-03-22,2026-04-02,Dr. Rajesh Kumar
+P000421,William Kumar,57,Male,Cancer,Oncology Ward,4,2026-04-09,2026-04-17,Dr. Meera Iyer
+P000422,Aarav Iyer,67,Male,Cardiology,Cardiac Care Unit,3,2026-03-30,2026-04-08,Dr. Anita Rao
+P000423,Aditya Johnson,40,Male,Anesthesiology,Surgical Recovery,1,2026-04-03,2026-04-05,Dr. Lakshmi Rao
+P000424,Liam Das,17,Male,Anxiety Disorder,Psychiatric Ward,5,2026-03-18,2026-03-21,Dr. Arvind Menon
+P000425,Elizabeth Wilson,64,Male,Cardiology,Cardiac Care Unit,3,2026-03-29,2026-04-02,Dr. Anita Rao
+P000426,Aadhya Rodriguez,62,Female,Anesthesiology,Surgical Recovery,1,2026-04-18,2026-04-21,Dr. David Park
+P000427,Dhruv Menon,45,Male,Diabetes,Endocrinology Ward,2,2026-03-31,2026-04-05,Dr. Thomas Wright
+P000428,Emma Reddy,64,Female,Anesthesiology,Surgical Recovery,1,2026-03-06,2026-03-11,Dr. Lakshmi Rao
+P000429,Siya Sharma,21,Male,Anxiety Disorder,Psychiatric Ward,5,2026-02-22,2026-02-24,Dr. Arvind Menon
+P000430,Linda Bose,68,Male,Anesthesiology,Surgical Recovery,1,2026-04-04,2026-04-10,Dr. Lakshmi Rao
+P000431,Aryan Mehta,92,Male,Cancer,Oncology Ward,4,2026-04-18,2026-05-01,Dr. Meera Iyer
+P000432,John Mehta,69,Female,Diabetes,Endocrinology Ward,2,2026-03-25,2026-03-29,Dr. Neha Gupta
+P000433,James Singh,37,Female,Diabetes,Endocrinology Ward,2,2026-03-27,2026-03-29,Dr. Neha Gupta
+P000434,Ananya Lopez,44,Male,Anxiety Disorder,Psychiatric Ward,5,2026-03-10,2026-03-18,Dr. Arvind Menon
+P000435,Diya Iyer,68,Male,Cardiology,Cardiac Care Unit,3,2026-04-17,2026-04-30,Dr. Anita Rao
+P000436,Aisha Shah,54,Male,Anxiety Disorder,Psychiatric Ward,5,2026-03-20,2026-03-23,Dr. Arvind Menon
+P000437,Kian Shah,34,Female,Anxiety Disorder,Psychiatric Ward,5,2026-03-03,2026-03-07,Dr. Arvind Menon
+P000438,Barbara Brown,68,Female,Cardiology,Cardiac Care Unit,3,2026-04-14,2026-04-23,Dr. Anita Rao
+P000439,Anika Bose,52,Female,Cancer,Oncology Ward,4,2026-04-22,2026-05-02,Dr. Samuel Chen
+P000440,Michael Davis,42,Female,Diabetes,Endocrinology Ward,2,2026-03-25,2026-03-27,Dr. Neha Gupta
+P000441,Ishaan Gupta,78,Female,Cardiology,Cardiac Care Unit,3,2026-04-11,2026-04-17,Dr. Rajesh Kumar
+P000442,Patricia Jones,32,Male,Cardiology,Cardiac Care Unit,3,2026-04-07,2026-04-20,Dr. Anita Rao
+P000443,Arjun Reddy,36,Male,Behavioral Issues,Behavioral Health Unit,5,2026-04-18,2026-04-23,Dr. Michael Green
+P000444,Zara Verma,42,Male,Cardiology,Cardiac Care Unit,3,2026-03-23,2026-04-02,Dr. Anita Rao
+P000445,Riya Kumar,25,Male,Anxiety Disorder,Psychiatric Ward,5,2026-04-06,2026-04-10,Dr. Arvind Menon
+P000446,Rohan Verma,37,Male,Diabetes,Endocrinology Ward,2,2026-03-28,2026-04-02,Dr. Thomas Wright
+P000447,Diya Bose,50,Male,Cardiology,Cardiac Care Unit,3,2026-03-13,2026-03-20,Dr. Anita Rao
+P000448,Isabella Johnson,71,Female,Anesthesiology,Surgical Recovery,1,2026-03-24,2026-03-27,Dr. David Park
+P000449,William Smith,33,Male,Anxiety Disorder,Psychiatric Ward,5,2026-04-12,2026-04-18,Dr. Priya Nair
+P000450,Rudra Sharma,25,Male,Behavioral Issues,Behavioral Health Unit,5,2026-03-03,2026-03-06,Dr. Michael Green
+P000451,Emma Williams,18,Female,Behavioral Issues,Behavioral Health Unit,5,2026-04-08,2026-04-12,Dr. Kavita Joshi
+P000452,Mia Martinez,11,Male,Behavioral Issues,Behavioral Health Unit,5,2026-03-18,2026-03-24,Dr. Michael Green
+P000453,Charlotte Lopez,62,Male,Cardiology,Cardiac Care Unit,3,2026-02-24,2026-03-05,Dr. Anita Rao
+P000454,Anika Williams,64,Female,Diabetes,Endocrinology Ward,2,2026-02-22,2026-02-28,Dr. Neha Gupta
+P000455,Isabella Wilson,42,Female,Behavioral Issues,Behavioral Health Unit,5,2026-04-12,2026-04-19,Dr. Michael Green
+P000456,Vihaan Iyer,67,Male,Diabetes,Endocrinology Ward,2,2026-02-24,2026-02-28,Dr. Neha Gupta
+P000457,Myra Miller,63,Female,Cardiology,Cardiac Care Unit,3,2026-04-20,2026-04-29,Dr. Anita Rao
+P000458,Susan Singh,61,Male,Anesthesiology,Surgical Recovery,1,2026-03-31,2026-04-01,Dr. David Park
+P000459,Myra Menon,15,Female,Anxiety Disorder,Psychiatric Ward,5,2026-03-08,2026-03-12,Dr. Arvind Menon
+P000460,Tara Jones,30,Female,Anxiety Disorder,Psychiatric Ward,5,2026-04-09,2026-04-16,Dr. Priya Nair
+P000461,Liam Miller,20,Male,Anxiety Disorder,Psychiatric Ward,5,2026-03-08,2026-03-12,Dr. Priya Nair
+P000462,William Bose,47,Female,Anesthesiology,Surgical Recovery,1,2026-03-16,2026-03-18,Dr. David Park
+P000463,Mary Iyer,34,Female,Diabetes,Endocrinology Ward,2,2026-02-23,2026-02-25,Dr. Thomas Wright
+P000464,Noah Patel,42,Male,Anxiety Disorder,Psychiatric Ward,5,2026-03-02,2026-03-05,Dr. Arvind Menon
+P000465,Ananya Reddy,34,Male,Anxiety Disorder,Psychiatric Ward,5,2026-04-01,2026-04-04,Dr. Arvind Menon
+P000466,Liam Sharma,50,Female,Cardiology,Cardiac Care Unit,3,2026-02-26,2026-03-04,Dr. Rajesh Kumar
+P000467,Kiara Roy,57,Female,Diabetes,Endocrinology Ward,2,2026-03-01,2026-03-03,Dr. Thomas Wright
+P000468,William Jones,47,Female,Anesthesiology,Surgical Recovery,1,2026-02-28,2026-03-07,Dr. Lakshmi Rao
+P000469,Pari Nair,12,Male,Behavioral Issues,Behavioral Health Unit,5,2026-04-13,2026-04-21,Dr. Michael Green
+P000470,Arjun Johnson,13,Male,Behavioral Issues,Behavioral Health Unit,5,2026-03-16,2026-03-24,Dr. Michael Green
+P000471,Riya Jones,74,Female,Cardiology,Cardiac Care Unit,3,2026-04-13,2026-04-23,Dr. Anita Rao
+P000472,Kian Reddy,25,Male,Cancer,Oncology Ward,4,2026-03-12,2026-03-25,Dr. Samuel Chen
+P000473,Reyansh Verma,46,Male,Cancer,Oncology Ward,4,2026-04-14,2026-05-04,Dr. Meera Iyer
+P000474,Riya Patel,26,Male,Anxiety Disorder,Psychiatric Ward,5,2026-04-17,2026-04-22,Dr. Priya Nair
+P000475,Patricia Menon,38,Male,Behavioral Issues,Behavioral Health Unit,5,2026-04-04,2026-04-08,Dr. Michael Green
+P000476,Linda Nair,48,Male,Cardiology,Cardiac Care Unit,3,2026-03-30,2026-04-11,Dr. Anita Rao
+P000477,Kiara Roy,74,Male,Cardiology,Cardiac Care Unit,3,2026-04-09,2026-04-17,Dr. Rajesh Kumar
+P000478,Rohan Rodriguez,56,Female,Diabetes,Endocrinology Ward,2,2026-04-18,2026-04-20,Dr. Thomas Wright
+P000479,Siya Rodriguez,26,Female,Diabetes,Endocrinology Ward,2,2026-03-21,2026-03-29,Dr. Thomas Wright
+P000480,Elizabeth Lopez,44,Female,Behavioral Issues,Behavioral Health Unit,5,2026-03-24,2026-03-30,Dr. Michael Green
+P000481,Susan Verma,48,Male,Cancer,Oncology Ward,4,2026-03-03,2026-03-24,Dr. Meera Iyer
+P000482,Oliver Shah,92,Male,Cardiology,Cardiac Care Unit,3,2026-04-15,2026-04-22,Dr. Anita Rao
+P000483,Elizabeth Mehta,58,Male,Cardiology,Cardiac Care Unit,3,2026-04-14,2026-04-28,Dr. Rajesh Kumar
+P000484,Liam Martinez,52,Male,Cardiology,Cardiac Care Unit,3,2026-02-28,2026-03-09,Dr. Rajesh Kumar
+P000485,Aarav Martinez,61,Female,Diabetes,Endocrinology Ward,2,2026-03-21,2026-03-27,Dr. Thomas Wright
+P000486,Rohan Singh,20,Male,Diabetes,Endocrinology Ward,2,2026-02-23,2026-02-25,Dr. Neha Gupta
+P000487,Reyansh Martinez,19,Female,Anxiety Disorder,Psychiatric Ward,5,2026-02-26,2026-03-08,Dr. Arvind Menon
+P000488,Ananya Bose,37,Female,Diabetes,Endocrinology Ward,2,2026-04-06,2026-04-09,Dr. Thomas Wright
+P000489,Richard Garcia,45,Male,Diabetes,Endocrinology Ward,2,2026-03-29,2026-03-31,Dr. Thomas Wright
+P000490,Vihaan Davis,56,Female,Cancer,Oncology Ward,4,2026-03-02,2026-03-17,Dr. Samuel Chen
+P000491,Charlotte Joshi,59,Male,Anesthesiology,Surgical Recovery,1,2026-04-17,2026-04-23,Dr. Lakshmi Rao
+P000492,Noah Shah,34,Male,Anesthesiology,Surgical Recovery,1,2026-03-13,2026-03-18,Dr. Lakshmi Rao
+P000493,Kian Hernandez,79,Male,Cancer,Oncology Ward,4,2026-03-06,2026-03-26,Dr. Samuel Chen
+P000494,James Martinez,56,Female,Cardiology,Cardiac Care Unit,3,2026-03-05,2026-03-11,Dr. Anita Rao
+P000495,Charlotte Reddy,61,Male,Anesthesiology,Surgical Recovery,1,2026-04-21,2026-04-23,Dr. David Park
+P000496,Navya Miller,52,Male,Cardiology,Cardiac Care Unit,3,2026-03-14,2026-03-24,Dr. Anita Rao
+P000497,Aryan Roy,70,Female,Cancer,Oncology Ward,4,2026-04-12,2026-05-01,Dr. Samuel Chen
+P000498,Anika Roy,77,Female,Cardiology,Cardiac Care Unit,3,2026-04-05,2026-04-10,Dr. Anita Rao
+P000499,Kabir Lopez,37,Male,Diabetes,Endocrinology Ward,2,2026-02-28,2026-03-03,Dr. Neha Gupta
+P000500,Elizabeth Reddy,32,Female,Anxiety Disorder,Psychiatric Ward,5,2026-03-24,2026-03-26,Dr. Priya Nair

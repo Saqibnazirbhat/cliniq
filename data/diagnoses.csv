@@ -1,0 +1,501 @@
+diagnosis_id,patient_id,diagnosis,severity,requires_surgery,potential_release_date
+D0000001,P000001,Generalized Anxiety Disorder,Moderate,False,2026-04-29
+D0000002,P000002,Social Anxiety,Moderate,False,2026-03-22
+D0000003,P000003,Colorectal Cancer,Severe,True,2026-03-20
+D0000004,P000004,Congestive Heart Failure,Severe,True,2026-05-05
+D0000005,P000005,PTSD,Mild,False,2026-03-28
+D0000006,P000006,Diabetic Ketoacidosis,Mild,False,2026-03-21
+D0000007,P000007,Arrhythmia,Moderate,True,2026-03-08
+D0000008,P000008,Colorectal Cancer,Severe,False,2026-05-03
+D0000009,P000009,Diabetic Ketoacidosis,Moderate,False,2026-04-21
+D0000010,P000010,ADHD,Moderate,False,2026-03-18
+D0000011,P000011,Panic Disorder,Moderate,False,2026-03-06
+D0000012,P000012,OCD,Severe,False,2026-04-21
+D0000013,P000013,Major Depression,Mild,False,2026-04-11
+D0000014,P000014,Social Anxiety,Moderate,False,2026-04-09
+D0000015,P000015,Leukemia,Severe,False,2026-03-09
+D0000016,P000016,Type 2 Diabetes,Moderate,False,2026-04-01
+D0000017,P000017,Pre-Surgical Evaluation,Moderate,True,2026-03-10
+D0000018,P000018,Social Anxiety,Severe,False,2026-04-01
+D0000019,P000019,Type 2 Diabetes,Severe,False,2026-03-26
+D0000020,P000020,Colorectal Cancer,Severe,False,2026-03-25
+D0000021,P000021,Major Depression,Moderate,False,2026-04-27
+D0000022,P000022,Pre-Surgical Evaluation,Severe,True,2026-05-04
+D0000023,P000023,Arrhythmia,Moderate,False,2026-03-03
+D0000024,P000024,Diabetic Ketoacidosis,Severe,False,2026-03-06
+D0000025,P000025,Generalized Anxiety Disorder,Mild,False,2026-04-27
+D0000026,P000026,Angina,Severe,False,2026-03-07
+D0000027,P000027,Gestational Diabetes,Moderate,False,2026-03-25
+D0000028,P000028,Leukemia,Severe,True,2026-05-04
+D0000029,P000029,Major Depression,Mild,False,2026-03-25
+D0000030,P000030,Anesthesia Complication,Mild,False,2026-03-30
+D0000031,P000031,PTSD,Severe,False,2026-04-02
+D0000032,P000032,Hypertension,Severe,False,2026-04-24
+D0000033,P000033,Lung Cancer,Severe,True,2026-04-25
+D0000034,P000034,ADHD,Mild,False,2026-04-02
+D0000035,P000035,OCD,Severe,False,2026-04-07
+D0000036,P000036,Type 1 Diabetes,Moderate,False,2026-04-24
+D0000037,P000037,Congestive Heart Failure,Moderate,False,2026-04-06
+D0000038,P000038,Gestational Diabetes,Critical,True,2026-04-04
+D0000039,P000039,Type 1 Diabetes,Moderate,False,2026-04-11
+D0000040,P000040,Lymphoma,Severe,True,2026-04-05
+D0000041,P000041,Panic Disorder,Moderate,False,2026-03-06
+D0000042,P000042,Arrhythmia,Severe,True,2026-03-25
+D0000043,P000043,ADHD,Moderate,False,2026-04-13
+D0000044,P000044,Arrhythmia,Severe,False,2026-03-28
+D0000045,P000045,Diabetic Ketoacidosis,Moderate,False,2026-04-29
+D0000046,P000046,Hypertension,Severe,True,2026-03-23
+D0000047,P000047,Post-Operative Recovery,Moderate,True,2026-04-23
+D0000048,P000048,Hypertension,Mild,False,2026-03-04
+D0000049,P000049,Myocardial Infarction,Mild,False,2026-02-28
+D0000050,P000050,Arrhythmia,Moderate,False,2026-03-11
+D0000051,P000051,Conduct Disorder,Severe,False,2026-03-12
+D0000052,P000052,Pre-Surgical Evaluation,Mild,True,2026-03-20
+D0000053,P000053,Myocardial Infarction,Severe,True,2026-03-10
+D0000054,P000054,PTSD,Mild,False,2026-04-26
+D0000055,P000055,Hypertension,Moderate,True,2026-04-12
+D0000056,P000056,Generalized Anxiety Disorder,Mild,False,2026-04-17
+D0000057,P000057,Panic Disorder,Mild,False,2026-04-02
+D0000058,P000058,Generalized Anxiety Disorder,Severe,False,2026-03-25
+D0000059,P000059,Conduct Disorder,Severe,False,2026-03-17
+D0000060,P000060,Social Anxiety,Mild,False,2026-04-10
+D0000061,P000061,Arrhythmia,Critical,True,2026-03-31
+D0000062,P000062,Panic Disorder,Moderate,False,2026-04-02
+D0000063,P000063,Hypertension,Moderate,True,2026-03-21
+D0000064,P000064,Gestational Diabetes,Severe,False,2026-03-08
+D0000065,P000065,Angina,Mild,True,2026-03-27
+D0000066,P000066,Hypertension,Critical,False,2026-04-10
+D0000067,P000067,Myocardial Infarction,Moderate,True,2026-03-14
+D0000068,P000068,Colorectal Cancer,Critical,True,2026-04-06
+D0000069,P000069,Myocardial Infarction,Moderate,True,2026-03-31
+D0000070,P000070,Post-Operative Recovery,Mild,True,2026-04-03
+D0000071,P000071,Leukemia,Moderate,False,2026-03-19
+D0000072,P000072,Myocardial Infarction,Moderate,False,2026-04-17
+D0000073,P000073,Myocardial Infarction,Moderate,False,2026-04-27
+D0000074,P000074,Colorectal Cancer,Critical,False,2026-03-20
+D0000075,P000075,Conduct Disorder,Moderate,False,2026-04-12
+D0000076,P000076,Post-Operative Recovery,Moderate,True,2026-03-27
+D0000077,P000077,Lung Cancer,Critical,True,2026-05-02
+D0000078,P000078,Conduct Disorder,Severe,False,2026-03-03
+D0000079,P000079,Arrhythmia,Moderate,False,2026-04-27
+D0000080,P000080,Panic Disorder,Severe,False,2026-04-18
+D0000081,P000081,Congestive Heart Failure,Moderate,False,2026-04-19
+D0000082,P000082,Pre-Surgical Evaluation,Mild,True,2026-04-15
+D0000083,P000083,Colorectal Cancer,Critical,True,2026-04-08
+D0000084,P000084,Type 2 Diabetes,Moderate,False,2026-03-17
+D0000085,P000085,Congestive Heart Failure,Severe,True,2026-03-16
+D0000086,P000086,Hypertension,Mild,False,2026-04-21
+D0000087,P000087,Gestational Diabetes,Moderate,False,2026-03-11
+D0000088,P000088,Leukemia,Moderate,True,2026-04-08
+D0000089,P000089,Breast Cancer,Critical,True,2026-04-10
+D0000090,P000090,Major Depression,Moderate,False,2026-03-16
+D0000091,P000091,Gestational Diabetes,Moderate,False,2026-03-05
+D0000092,P000092,ADHD,Moderate,False,2026-03-29
+D0000093,P000093,Generalized Anxiety Disorder,Moderate,False,2026-04-09
+D0000094,P000094,Generalized Anxiety Disorder,Mild,False,2026-03-22
+D0000095,P000095,Lymphoma,Severe,False,2026-04-19
+D0000096,P000096,Type 2 Diabetes,Severe,False,2026-03-20
+D0000097,P000097,Colorectal Cancer,Severe,True,2026-05-01
+D0000098,P000098,Congestive Heart Failure,Severe,True,2026-03-21
+D0000099,P000099,Social Anxiety,Moderate,False,2026-04-24
+D0000100,P000100,Panic Disorder,Mild,False,2026-04-24
+D0000101,P000101,Social Anxiety,Mild,False,2026-04-25
+D0000102,P000102,Breast Cancer,Severe,True,2026-05-07
+D0000103,P000103,Pre-Surgical Evaluation,Moderate,True,2026-03-23
+D0000104,P000104,OCD,Mild,False,2026-04-21
+D0000105,P000105,PTSD,Mild,False,2026-04-08
+D0000106,P000106,Type 2 Diabetes,Severe,False,2026-03-21
+D0000107,P000107,Congestive Heart Failure,Mild,True,2026-05-03
+D0000108,P000108,Congestive Heart Failure,Severe,False,2026-04-20
+D0000109,P000109,Type 2 Diabetes,Moderate,False,2026-04-25
+D0000110,P000110,Type 1 Diabetes,Mild,False,2026-04-20
+D0000111,P000111,Angina,Moderate,False,2026-04-18
+D0000112,P000112,Major Depression,Moderate,False,2026-03-30
+D0000113,P000113,Lung Cancer,Moderate,True,2026-03-30
+D0000114,P000114,PTSD,Moderate,False,2026-03-09
+D0000115,P000115,Hypertension,Severe,True,2026-04-28
+D0000116,P000116,Leukemia,Critical,True,2026-05-02
+D0000117,P000117,Lymphoma,Critical,False,2026-03-27
+D0000118,P000118,Panic Disorder,Severe,False,2026-03-11
+D0000119,P000119,Colorectal Cancer,Severe,False,2026-04-07
+D0000120,P000120,Type 2 Diabetes,Severe,False,2026-04-03
+D0000121,P000121,Post-Operative Recovery,Moderate,True,2026-03-25
+D0000122,P000122,Colorectal Cancer,Severe,False,2026-03-25
+D0000123,P000123,Leukemia,Severe,False,2026-05-02
+D0000124,P000124,OCD,Severe,False,2026-03-16
+D0000125,P000125,Post-Operative Recovery,Severe,True,2026-04-12
+D0000126,P000126,Generalized Anxiety Disorder,Mild,False,2026-03-07
+D0000127,P000127,Panic Disorder,Mild,False,2026-04-08
+D0000128,P000128,Panic Disorder,Moderate,False,2026-04-30
+D0000129,P000129,Colorectal Cancer,Severe,True,2026-04-07
+D0000130,P000130,Conduct Disorder,Moderate,False,2026-03-26
+D0000131,P000131,OCD,Severe,False,2026-04-01
+D0000132,P000132,Gestational Diabetes,Moderate,False,2026-03-29
+D0000133,P000133,ADHD,Severe,False,2026-05-06
+D0000134,P000134,Conduct Disorder,Mild,False,2026-04-25
+D0000135,P000135,ADHD,Critical,True,2026-03-24
+D0000136,P000136,Congestive Heart Failure,Moderate,False,2026-04-10
+D0000137,P000137,ADHD,Severe,False,2026-03-10
+D0000138,P000138,Lymphoma,Severe,True,2026-03-23
+D0000139,P000139,Lung Cancer,Moderate,False,2026-04-03
+D0000140,P000140,Panic Disorder,Mild,False,2026-03-07
+D0000141,P000141,Generalized Anxiety Disorder,Mild,False,2026-03-15
+D0000142,P000142,Lung Cancer,Severe,True,2026-03-10
+D0000143,P000143,Anesthesia Complication,Mild,True,2026-03-10
+D0000144,P000144,Social Anxiety,Mild,False,2026-03-17
+D0000145,P000145,Social Anxiety,Moderate,False,2026-05-01
+D0000146,P000146,Social Anxiety,Moderate,False,2026-03-09
+D0000147,P000147,Angina,Severe,True,2026-03-21
+D0000148,P000148,Angina,Moderate,True,2026-03-12
+D0000149,P000149,Lung Cancer,Moderate,False,2026-05-11
+D0000150,P000150,Diabetic Ketoacidosis,Moderate,False,2026-03-23
+D0000151,P000151,Angina,Moderate,False,2026-04-16
+D0000152,P000152,Breast Cancer,Critical,True,2026-05-05
+D0000153,P000153,Angina,Moderate,False,2026-03-06
+D0000154,P000154,Bipolar Disorder,Mild,False,2026-03-25
+D0000155,P000155,Post-Operative Recovery,Moderate,True,2026-04-29
+D0000156,P000156,Pre-Surgical Evaluation,Mild,True,2026-03-15
+D0000157,P000157,Angina,Moderate,False,2026-04-30
+D0000158,P000158,Hypertension,Mild,True,2026-04-18
+D0000159,P000159,Post-Operative Recovery,Severe,False,2026-03-10
+D0000160,P000160,OCD,Severe,False,2026-03-11
+D0000161,P000161,Pre-Surgical Evaluation,Mild,True,2026-03-15
+D0000162,P000162,Anesthesia Complication,Severe,True,2026-04-30
+D0000163,P000163,Pre-Surgical Evaluation,Moderate,True,2026-04-05
+D0000164,P000164,Breast Cancer,Severe,False,2026-04-29
+D0000165,P000165,Conduct Disorder,Mild,False,2026-03-19
+D0000166,P000166,Bipolar Disorder,Mild,False,2026-04-25
+D0000167,P000167,Type 1 Diabetes,Severe,False,2026-04-14
+D0000168,P000168,Colorectal Cancer,Moderate,True,2026-03-14
+D0000169,P000169,PTSD,Moderate,False,2026-04-08
+D0000170,P000170,Generalized Anxiety Disorder,Mild,False,2026-04-27
+D0000171,P000171,Angina,Severe,True,2026-03-18
+D0000172,P000172,Type 1 Diabetes,Moderate,False,2026-03-21
+D0000173,P000173,ADHD,Moderate,False,2026-04-26
+D0000174,P000174,Post-Operative Recovery,Moderate,True,2026-03-09
+D0000175,P000175,Generalized Anxiety Disorder,Mild,False,2026-05-01
+D0000176,P000176,Post-Operative Recovery,Moderate,True,2026-04-09
+D0000177,P000177,Type 2 Diabetes,Critical,False,2026-04-28
+D0000178,P000178,Arrhythmia,Critical,True,2026-03-27
+D0000179,P000179,Myocardial Infarction,Mild,False,2026-05-02
+D0000180,P000180,Lymphoma,Severe,False,2026-04-20
+D0000181,P000181,Social Anxiety,Mild,False,2026-03-29
+D0000182,P000182,Angina,Critical,True,2026-04-22
+D0000183,P000183,Social Anxiety,Mild,False,2026-04-19
+D0000184,P000184,Lymphoma,Moderate,False,2026-05-06
+D0000185,P000185,Angina,Severe,False,2026-04-13
+D0000186,P000186,Arrhythmia,Moderate,False,2026-04-08
+D0000187,P000187,Post-Operative Recovery,Mild,True,2026-04-28
+D0000188,P000188,Arrhythmia,Critical,True,2026-03-26
+D0000189,P000189,Angina,Mild,True,2026-03-06
+D0000190,P000190,Anesthesia Complication,Moderate,True,2026-04-24
+D0000191,P000191,Hypertension,Severe,False,2026-04-10
+D0000192,P000192,Colorectal Cancer,Severe,False,2026-03-18
+D0000193,P000193,Colorectal Cancer,Moderate,True,2026-04-11
+D0000194,P000194,Congestive Heart Failure,Severe,True,2026-05-05
+D0000195,P000195,Colorectal Cancer,Moderate,False,2026-04-02
+D0000196,P000196,Arrhythmia,Moderate,False,2026-03-31
+D0000197,P000197,Bipolar Disorder,Moderate,False,2026-03-25
+D0000198,P000198,ADHD,Moderate,False,2026-03-27
+D0000199,P000199,Lymphoma,Moderate,True,2026-05-07
+D0000200,P000200,Generalized Anxiety Disorder,Moderate,False,2026-04-07
+D0000201,P000201,PTSD,Moderate,False,2026-03-21
+D0000202,P000202,Post-Operative Recovery,Mild,True,2026-04-26
+D0000203,P000203,Lung Cancer,Severe,True,2026-04-20
+D0000204,P000204,Angina,Severe,False,2026-03-31
+D0000205,P000205,Congestive Heart Failure,Moderate,False,2026-03-17
+D0000206,P000206,Colorectal Cancer,Moderate,True,2026-04-11
+D0000207,P000207,Panic Disorder,Moderate,False,2026-03-07
+D0000208,P000208,Lung Cancer,Moderate,True,2026-03-23
+D0000209,P000209,Anesthesia Complication,Moderate,False,2026-04-24
+D0000210,P000210,Gestational Diabetes,Mild,False,2026-03-05
+D0000211,P000211,Panic Disorder,Mild,False,2026-04-25
+D0000212,P000212,Colorectal Cancer,Moderate,True,2026-04-14
+D0000213,P000213,Generalized Anxiety Disorder,Severe,False,2026-03-15
+D0000214,P000214,Lymphoma,Moderate,False,2026-03-16
+D0000215,P000215,Arrhythmia,Moderate,False,2026-03-07
+D0000216,P000216,PTSD,Moderate,False,2026-04-11
+D0000217,P000217,Myocardial Infarction,Moderate,False,2026-05-05
+D0000218,P000218,Hypertension,Moderate,False,2026-04-18
+D0000219,P000219,Colorectal Cancer,Severe,True,2026-04-03
+D0000220,P000220,Type 1 Diabetes,Severe,False,2026-04-15
+D0000221,P000221,Panic Disorder,Mild,False,2026-04-21
+D0000222,P000222,Diabetic Ketoacidosis,Moderate,False,2026-03-14
+D0000223,P000223,Arrhythmia,Moderate,False,2026-05-03
+D0000224,P000224,Major Depression,Severe,False,2026-04-02
+D0000225,P000225,Generalized Anxiety Disorder,Mild,False,2026-04-09
+D0000226,P000226,Type 2 Diabetes,Moderate,False,2026-03-04
+D0000227,P000227,Conduct Disorder,Moderate,False,2026-04-07
+D0000228,P000228,Pre-Surgical Evaluation,Mild,True,2026-04-04
+D0000229,P000229,Type 1 Diabetes,Moderate,False,2026-04-13
+D0000230,P000230,Hypertension,Mild,True,2026-04-14
+D0000231,P000231,Conduct Disorder,Moderate,False,2026-03-18
+D0000232,P000232,Breast Cancer,Severe,False,2026-04-23
+D0000233,P000233,Anesthesia Complication,Moderate,False,2026-04-04
+D0000234,P000234,Angina,Moderate,False,2026-03-18
+D0000235,P000235,Lung Cancer,Critical,True,2026-05-04
+D0000236,P000236,Lymphoma,Severe,False,2026-03-26
+D0000237,P000237,Diabetic Ketoacidosis,Mild,False,2026-04-15
+D0000238,P000238,Congestive Heart Failure,Severe,False,2026-03-18
+D0000239,P000239,Gestational Diabetes,Mild,False,2026-02-28
+D0000240,P000240,Major Depression,Mild,False,2026-03-29
+D0000241,P000241,Congestive Heart Failure,Critical,False,2026-04-07
+D0000242,P000242,Type 1 Diabetes,Mild,False,2026-04-20
+D0000243,P000243,Breast Cancer,Severe,True,2026-04-29
+D0000244,P000244,Type 1 Diabetes,Severe,False,2026-04-23
+D0000245,P000245,Leukemia,Severe,True,2026-05-13
+D0000246,P000246,PTSD,Severe,False,2026-03-11
+D0000247,P000247,Gestational Diabetes,Severe,False,2026-03-23
+D0000248,P000248,OCD,Severe,False,2026-03-21
+D0000249,P000249,Anesthesia Complication,Mild,True,2026-04-20
+D0000250,P000250,PTSD,Mild,False,2026-03-24
+D0000251,P000251,Generalized Anxiety Disorder,Mild,False,2026-04-11
+D0000252,P000252,Breast Cancer,Moderate,True,2026-04-16
+D0000253,P000253,Arrhythmia,Severe,False,2026-04-04
+D0000254,P000254,PTSD,Mild,False,2026-02-27
+D0000255,P000255,OCD,Mild,False,2026-03-02
+D0000256,P000256,ADHD,Moderate,False,2026-03-09
+D0000257,P000257,Lung Cancer,Severe,True,2026-05-01
+D0000258,P000258,Gestational Diabetes,Mild,False,2026-03-23
+D0000259,P000259,ADHD,Mild,False,2026-04-08
+D0000260,P000260,Hypertension,Moderate,False,2026-04-18
+D0000261,P000261,Type 2 Diabetes,Moderate,False,2026-04-23
+D0000262,P000262,Post-Operative Recovery,Moderate,True,2026-03-28
+D0000263,P000263,Lymphoma,Severe,False,2026-03-22
+D0000264,P000264,Myocardial Infarction,Severe,True,2026-05-03
+D0000265,P000265,Lung Cancer,Critical,True,2026-04-19
+D0000266,P000266,Anesthesia Complication,Mild,True,2026-04-06
+D0000267,P000267,Pre-Surgical Evaluation,Moderate,True,2026-03-23
+D0000268,P000268,OCD,Moderate,False,2026-04-22
+D0000269,P000269,Type 1 Diabetes,Critical,False,2026-03-19
+D0000270,P000270,Congestive Heart Failure,Severe,True,2026-04-07
+D0000271,P000271,Angina,Moderate,False,2026-03-18
+D0000272,P000272,Angina,Severe,True,2026-03-27
+D0000273,P000273,Breast Cancer,Severe,False,2026-04-08
+D0000274,P000274,Diabetic Ketoacidosis,Mild,False,2026-04-10
+D0000275,P000275,Anesthesia Complication,Moderate,True,2026-04-20
+D0000276,P000276,Bipolar Disorder,Moderate,False,2026-04-24
+D0000277,P000277,Social Anxiety,Moderate,False,2026-04-08
+D0000278,P000278,Panic Disorder,Moderate,False,2026-04-20
+D0000279,P000279,Gestational Diabetes,Mild,False,2026-04-13
+D0000280,P000280,Gestational Diabetes,Moderate,False,2026-04-20
+D0000281,P000281,Diabetic Ketoacidosis,Moderate,False,2026-04-01
+D0000282,P000282,OCD,Mild,False,2026-03-19
+D0000283,P000283,Diabetic Ketoacidosis,Severe,False,2026-03-17
+D0000284,P000284,OCD,Critical,True,2026-03-16
+D0000285,P000285,Conduct Disorder,Critical,False,2026-05-04
+D0000286,P000286,PTSD,Severe,False,2026-03-11
+D0000287,P000287,Hypertension,Mild,False,2026-04-06
+D0000288,P000288,Diabetic Ketoacidosis,Mild,False,2026-03-21
+D0000289,P000289,Lymphoma,Severe,True,2026-04-17
+D0000290,P000290,Myocardial Infarction,Moderate,False,2026-05-01
+D0000291,P000291,Social Anxiety,Moderate,False,2026-04-12
+D0000292,P000292,PTSD,Severe,False,2026-04-06
+D0000293,P000293,Lymphoma,Moderate,True,2026-04-25
+D0000294,P000294,Major Depression,Moderate,False,2026-03-20
+D0000295,P000295,Anesthesia Complication,Mild,True,2026-03-06
+D0000296,P000296,Lymphoma,Critical,True,2026-05-08
+D0000297,P000297,Generalized Anxiety Disorder,Mild,False,2026-03-13
+D0000298,P000298,Pre-Surgical Evaluation,Moderate,True,2026-04-22
+D0000299,P000299,Colorectal Cancer,Critical,False,2026-05-02
+D0000300,P000300,Angina,Critical,False,2026-03-27
+D0000301,P000301,Angina,Critical,True,2026-05-03
+D0000302,P000302,Major Depression,Severe,False,2026-04-08
+D0000303,P000303,Conduct Disorder,Severe,False,2026-03-16
+D0000304,P000304,Colorectal Cancer,Mild,True,2026-03-15
+D0000305,P000305,Type 1 Diabetes,Moderate,False,2026-04-18
+D0000306,P000306,Myocardial Infarction,Moderate,True,2026-04-30
+D0000307,P000307,Myocardial Infarction,Moderate,True,2026-03-29
+D0000308,P000308,Colorectal Cancer,Moderate,True,2026-03-23
+D0000309,P000309,Anesthesia Complication,Severe,True,2026-03-19
+D0000310,P000310,Leukemia,Severe,False,2026-04-26
+D0000311,P000311,Anesthesia Complication,Moderate,True,2026-04-01
+D0000312,P000312,Lymphoma,Severe,False,2026-04-28
+D0000313,P000313,Arrhythmia,Severe,False,2026-04-15
+D0000314,P000314,Leukemia,Severe,True,2026-04-13
+D0000315,P000315,Generalized Anxiety Disorder,Moderate,False,2026-04-26
+D0000316,P000316,Diabetic Ketoacidosis,Moderate,False,2026-03-02
+D0000317,P000317,Pre-Surgical Evaluation,Moderate,True,2026-03-06
+D0000318,P000318,Major Depression,Moderate,False,2026-03-21
+D0000319,P000319,Gestational Diabetes,Severe,False,2026-03-05
+D0000320,P000320,Colorectal Cancer,Moderate,True,2026-04-18
+D0000321,P000321,Colorectal Cancer,Severe,True,2026-03-20
+D0000322,P000322,Type 2 Diabetes,Mild,False,2026-03-22
+D0000323,P000323,Panic Disorder,Moderate,False,2026-03-29
+D0000324,P000324,ADHD,Mild,False,2026-04-22
+D0000325,P000325,Leukemia,Severe,False,2026-03-31
+D0000326,P000326,Diabetic Ketoacidosis,Moderate,False,2026-05-02
+D0000327,P000327,Hypertension,Critical,False,2026-04-19
+D0000328,P000328,OCD,Moderate,False,2026-04-27
+D0000329,P000329,Generalized Anxiety Disorder,Moderate,False,2026-04-29
+D0000330,P000330,ADHD,Mild,False,2026-04-12
+D0000331,P000331,Social Anxiety,Mild,False,2026-04-01
+D0000332,P000332,Gestational Diabetes,Moderate,False,2026-04-27
+D0000333,P000333,Gestational Diabetes,Severe,False,2026-04-25
+D0000334,P000334,Generalized Anxiety Disorder,Mild,False,2026-02-27
+D0000335,P000335,Diabetic Ketoacidosis,Mild,False,2026-03-01
+D0000336,P000336,Myocardial Infarction,Severe,True,2026-05-10
+D0000337,P000337,Type 1 Diabetes,Mild,False,2026-03-20
+D0000338,P000338,Bipolar Disorder,Moderate,False,2026-03-16
+D0000339,P000339,Myocardial Infarction,Moderate,True,2026-05-03
+D0000340,P000340,PTSD,Mild,False,2026-03-12
+D0000341,P000341,ADHD,Mild,False,2026-04-06
+D0000342,P000342,Type 2 Diabetes,Mild,True,2026-03-10
+D0000343,P000343,Arrhythmia,Severe,False,2026-05-02
+D0000344,P000344,Angina,Moderate,False,2026-04-04
+D0000345,P000345,Hypertension,Moderate,False,2026-04-10
+D0000346,P000346,Hypertension,Severe,False,2026-03-21
+D0000347,P000347,Lymphoma,Severe,True,2026-04-07
+D0000348,P000348,PTSD,Severe,False,2026-04-02
+D0000349,P000349,Leukemia,Critical,True,2026-03-20
+D0000350,P000350,Diabetic Ketoacidosis,Moderate,True,2026-04-26
+D0000351,P000351,Anesthesia Complication,Moderate,True,2026-04-12
+D0000352,P000352,Congestive Heart Failure,Critical,True,2026-04-07
+D0000353,P000353,OCD,Severe,False,2026-03-28
+D0000354,P000354,Social Anxiety,Mild,False,2026-04-22
+D0000355,P000355,Gestational Diabetes,Severe,False,2026-05-02
+D0000356,P000356,Pre-Surgical Evaluation,Mild,True,2026-03-15
+D0000357,P000357,Generalized Anxiety Disorder,Mild,False,2026-03-17
+D0000358,P000358,Angina,Moderate,False,2026-03-31
+D0000359,P000359,Diabetic Ketoacidosis,Moderate,False,2026-03-29
+D0000360,P000360,Diabetic Ketoacidosis,Moderate,False,2026-03-20
+D0000361,P000361,Lung Cancer,Critical,True,2026-05-02
+D0000362,P000362,Gestational Diabetes,Moderate,False,2026-04-03
+D0000363,P000363,Lung Cancer,Severe,True,2026-05-15
+D0000364,P000364,Angina,Mild,True,2026-04-11
+D0000365,P000365,Panic Disorder,Mild,False,2026-03-28
+D0000366,P000366,Post-Operative Recovery,Moderate,True,2026-04-26
+D0000367,P000367,Colorectal Cancer,Severe,True,2026-04-21
+D0000368,P000368,Leukemia,Critical,True,2026-04-26
+D0000369,P000369,Type 2 Diabetes,Severe,True,2026-05-07
+D0000370,P000370,Anesthesia Complication,Mild,True,2026-03-30
+D0000371,P000371,Myocardial Infarction,Severe,True,2026-03-20
+D0000372,P000372,Gestational Diabetes,Moderate,False,2026-04-06
+D0000373,P000373,Type 2 Diabetes,Critical,False,2026-03-08
+D0000374,P000374,Panic Disorder,Moderate,False,2026-03-27
+D0000375,P000375,Colorectal Cancer,Severe,False,2026-04-06
+D0000376,P000376,Myocardial Infarction,Moderate,False,2026-03-04
+D0000377,P000377,Myocardial Infarction,Moderate,True,2026-04-03
+D0000378,P000378,Type 1 Diabetes,Mild,False,2026-04-27
+D0000379,P000379,Breast Cancer,Moderate,True,2026-03-21
+D0000380,P000380,Lung Cancer,Moderate,False,2026-03-19
+D0000381,P000381,Anesthesia Complication,Moderate,True,2026-03-27
+D0000382,P000382,Pre-Surgical Evaluation,Severe,True,2026-04-05
+D0000383,P000383,Lung Cancer,Severe,True,2026-03-19
+D0000384,P000384,Gestational Diabetes,Mild,False,2026-04-17
+D0000385,P000385,Pre-Surgical Evaluation,Moderate,True,2026-04-11
+D0000386,P000386,OCD,Moderate,False,2026-03-26
+D0000387,P000387,Type 2 Diabetes,Mild,False,2026-04-04
+D0000388,P000388,Diabetic Ketoacidosis,Moderate,False,2026-04-12
+D0000389,P000389,Post-Operative Recovery,Moderate,True,2026-03-25
+D0000390,P000390,Hypertension,Moderate,True,2026-04-06
+D0000391,P000391,Conduct Disorder,Moderate,False,2026-05-06
+D0000392,P000392,Gestational Diabetes,Moderate,False,2026-04-05
+D0000393,P000393,Colorectal Cancer,Moderate,True,2026-03-22
+D0000394,P000394,Type 2 Diabetes,Moderate,True,2026-03-17
+D0000395,P000395,Anesthesia Complication,Moderate,True,2026-04-23
+D0000396,P000396,Angina,Mild,False,2026-04-17
+D0000397,P000397,Type 1 Diabetes,Mild,False,2026-04-21
+D0000398,P000398,Angina,Moderate,True,2026-04-06
+D0000399,P000399,Lymphoma,Severe,False,2026-03-30
+D0000400,P000400,Congestive Heart Failure,Moderate,False,2026-03-21
+D0000401,P000401,Arrhythmia,Moderate,True,2026-04-27
+D0000402,P000402,Lymphoma,Moderate,False,2026-04-29
+D0000403,P000403,Panic Disorder,Mild,False,2026-03-18
+D0000404,P000404,Breast Cancer,Mild,True,2026-03-16
+D0000405,P000405,Conduct Disorder,Mild,False,2026-04-12
+D0000406,P000406,Diabetic Ketoacidosis,Moderate,True,2026-03-27
+D0000407,P000407,Post-Operative Recovery,Moderate,True,2026-03-25
+D0000408,P000408,Myocardial Infarction,Severe,False,2026-04-03
+D0000409,P000409,Diabetic Ketoacidosis,Moderate,False,2026-02-28
+D0000410,P000410,Leukemia,Critical,False,2026-03-24
+D0000411,P000411,Angina,Mild,True,2026-02-28
+D0000412,P000412,Social Anxiety,Moderate,False,2026-03-16
+D0000413,P000413,Type 1 Diabetes,Mild,False,2026-04-05
+D0000414,P000414,Congestive Heart Failure,Moderate,True,2026-04-11
+D0000415,P000415,Major Depression,Moderate,False,2026-04-12
+D0000416,P000416,Type 1 Diabetes,Moderate,False,2026-03-15
+D0000417,P000417,Gestational Diabetes,Moderate,False,2026-03-27
+D0000418,P000418,Post-Operative Recovery,Moderate,True,2026-03-10
+D0000419,P000419,OCD,Moderate,False,2026-04-16
+D0000420,P000420,Angina,Moderate,False,2026-04-03
+D0000421,P000421,Colorectal Cancer,Severe,False,2026-04-21
+D0000422,P000422,Arrhythmia,Critical,False,2026-04-16
+D0000423,P000423,Anesthesia Complication,Severe,True,2026-04-12
+D0000424,P000424,Social Anxiety,Mild,False,2026-03-20
+D0000425,P000425,Congestive Heart Failure,Moderate,True,2026-04-05
+D0000426,P000426,Pre-Surgical Evaluation,Critical,True,2026-05-02
+D0000427,P000427,Diabetic Ketoacidosis,Critical,True,2026-04-16
+D0000428,P000428,Anesthesia Complication,Mild,True,2026-03-14
+D0000429,P000429,Panic Disorder,Severe,False,2026-02-28
+D0000430,P000430,Post-Operative Recovery,Moderate,True,2026-04-15
+D0000431,P000431,Lung Cancer,Critical,True,2026-05-13
+D0000432,P000432,Gestational Diabetes,Mild,False,2026-03-28
+D0000433,P000433,Type 1 Diabetes,Mild,False,2026-03-28
+D0000434,P000434,Panic Disorder,Moderate,False,2026-03-19
+D0000435,P000435,Angina,Severe,False,2026-05-04
+D0000436,P000436,Social Anxiety,Mild,False,2026-03-22
+D0000437,P000437,PTSD,Moderate,False,2026-03-08
+D0000438,P000438,Arrhythmia,Mild,True,2026-04-27
+D0000439,P000439,Breast Cancer,Severe,False,2026-05-06
+D0000440,P000440,Type 1 Diabetes,Mild,False,2026-03-26
+D0000441,P000441,Myocardial Infarction,Severe,True,2026-04-23
+D0000442,P000442,Angina,Moderate,True,2026-04-24
+D0000443,P000443,Conduct Disorder,Mild,False,2026-04-22
+D0000444,P000444,Angina,Severe,False,2026-04-06
+D0000445,P000445,Social Anxiety,Mild,False,2026-04-09
+D0000446,P000446,Diabetic Ketoacidosis,Mild,False,2026-04-01
+D0000447,P000447,Myocardial Infarction,Moderate,False,2026-03-21
+D0000448,P000448,Anesthesia Complication,Mild,True,2026-03-29
+D0000449,P000449,PTSD,Moderate,False,2026-04-19
+D0000450,P000450,OCD,Moderate,False,2026-03-07
+D0000451,P000451,OCD,Moderate,False,2026-04-13
+D0000452,P000452,Conduct Disorder,Mild,False,2026-03-23
+D0000453,P000453,Myocardial Infarction,Critical,True,2026-03-18
+D0000454,P000454,Diabetic Ketoacidosis,Moderate,False,2026-03-01
+D0000455,P000455,Bipolar Disorder,Mild,False,2026-04-18
+D0000456,P000456,Diabetic Ketoacidosis,Mild,False,2026-02-27
+D0000457,P000457,Congestive Heart Failure,Critical,False,2026-05-07
+D0000458,P000458,Post-Operative Recovery,Severe,True,2026-04-09
+D0000459,P000459,Generalized Anxiety Disorder,Mild,False,2026-03-11
+D0000460,P000460,Panic Disorder,Mild,False,2026-04-15
+D0000461,P000461,Generalized Anxiety Disorder,Moderate,False,2026-03-13
+D0000462,P000462,Anesthesia Complication,Severe,True,2026-03-24
+D0000463,P000463,Type 2 Diabetes,Moderate,False,2026-02-26
+D0000464,P000464,Social Anxiety,Moderate,False,2026-03-06
+D0000465,P000465,Panic Disorder,Moderate,False,2026-04-05
+D0000466,P000466,Congestive Heart Failure,Severe,False,2026-03-08
+D0000467,P000467,Type 1 Diabetes,Moderate,False,2026-03-04
+D0000468,P000468,Post-Operative Recovery,Mild,True,2026-03-10
+D0000469,P000469,Bipolar Disorder,Mild,False,2026-04-20
+D0000470,P000470,ADHD,Moderate,False,2026-03-25
+D0000471,P000471,Congestive Heart Failure,Mild,True,2026-04-27
+D0000472,P000472,Breast Cancer,Severe,False,2026-03-29
+D0000473,P000473,Lymphoma,Severe,True,2026-05-11
+D0000474,P000474,PTSD,Mild,False,2026-04-21
+D0000475,P000475,Bipolar Disorder,Moderate,False,2026-04-09
+D0000476,P000476,Arrhythmia,Moderate,False,2026-04-12
+D0000477,P000477,Myocardial Infarction,Severe,True,2026-04-25
+D0000478,P000478,Diabetic Ketoacidosis,Moderate,False,2026-04-21
+D0000479,P000479,Diabetic Ketoacidosis,Critical,False,2026-04-06
+D0000480,P000480,Bipolar Disorder,Severe,False,2026-04-03
+D0000481,P000481,Lung Cancer,Critical,True,2026-04-06
+D0000482,P000482,Myocardial Infarction,Severe,False,2026-04-26
+D0000483,P000483,Angina,Moderate,False,2026-04-29
+D0000484,P000484,Congestive Heart Failure,Severe,True,2026-03-16
+D0000485,P000485,Diabetic Ketoacidosis,Moderate,False,2026-03-28
+D0000486,P000486,Type 2 Diabetes,Moderate,False,2026-02-26
+D0000487,P000487,Panic Disorder,Mild,False,2026-03-07
+D0000488,P000488,Type 2 Diabetes,Moderate,False,2026-04-10
+D0000489,P000489,Type 2 Diabetes,Severe,False,2026-04-04
+D0000490,P000490,Lung Cancer,Severe,True,2026-03-23
+D0000491,P000491,Post-Operative Recovery,Mild,True,2026-04-26
+D0000492,P000492,Anesthesia Complication,Severe,False,2026-03-22
+D0000493,P000493,Colorectal Cancer,Moderate,True,2026-03-30
+D0000494,P000494,Hypertension,Mild,True,2026-03-14
+D0000495,P000495,Pre-Surgical Evaluation,Moderate,True,2026-04-27
+D0000496,P000496,Myocardial Infarction,Moderate,False,2026-03-25
+D0000497,P000497,Leukemia,Severe,True,2026-05-10
+D0000498,P000498,Arrhythmia,Severe,True,2026-04-19
+D0000499,P000499,Type 2 Diabetes,Moderate,False,2026-03-04
+D0000500,P000500,PTSD,Mild,False,2026-03-25

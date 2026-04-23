@@ -1,0 +1,613 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Cliniq — Patient Management</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/papaparse@5.4.1/papaparse.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
+<style>
+  :root {
+    --primary: #00a67e;
+    --primary-dark: #008867;
+    --primary-light: #e6f7f1;
+    --accent-yellow: #e9c46a;
+    --bg: #f6f8fa;
+    --card: #ffffff;
+    --text: #1f2937;
+    --text-muted: #6b7280;
+    --border: #edf0f2;
+    --shadow: 0 1px 2px rgba(16,24,40,.025);
+    --radius: 12px;
+  }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; padding: 0; font-family: 'Inter', system-ui, -apple-system, sans-serif; color: var(--text); background: var(--bg); font-size: 13px; }
+
+  svg.ico { width: 16px; height: 16px; stroke: currentColor; fill: none; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; flex-shrink: 0; }
+  svg.ico-sm { width: 13px; height: 13px; }
+  svg.ico-xs { width: 11px; height: 11px; }
+
+  .app { display: grid; grid-template-columns: 220px 1fr; min-height: 100vh; }
+
+  /* Sidebar */
+  .sidebar { background: #ffffff; padding: 16px 10px; border-right: 1px solid var(--border); position: sticky; top: 0; height: 100vh; overflow-y: auto; display: flex; flex-direction: column; }
+  .brand { display: flex; align-items: center; gap: 8px; font-weight: 700; font-size: 15px; color: var(--primary); padding: 2px 8px 14px; }
+  .brand-logo { width: 22px; height: 22px; background: var(--primary); border-radius: 5px; display: flex; align-items: center; justify-content: center; color: #fff; font-weight: 700; font-size: 12px; }
+  .search { display: flex; align-items: center; gap: 7px; padding: 7px 10px; background: #f3f4f6; border-radius: 8px; margin-bottom: 12px; font-size: 12px; color: var(--text-muted); }
+  .search .kbd { margin-left: auto; padding: 1px 5px; background: #fff; border: 1px solid var(--border); border-radius: 4px; font-size: 10px; }
+  .nav-section { font-size: 10px; text-transform: uppercase; letter-spacing: .08em; color: var(--text-muted); margin: 10px 8px 4px; font-weight: 600; }
+  .nav-link { display: flex; align-items: center; gap: 10px; padding: 7px 10px; border-radius: 7px; color: var(--text); cursor: pointer; font-weight: 500; margin-bottom: 1px; font-size: 12.5px; }
+  .nav-link:hover { background: #f3f4f6; }
+  .nav-link.active { background: var(--primary-light); color: var(--primary-dark); font-weight: 600; }
+  .nav-link svg { color: var(--text-muted); }
+  .nav-link.active svg { color: var(--primary-dark); }
+  .sub-link { padding: 5px 10px 5px 34px; color: var(--text-muted); font-size: 12px; cursor: pointer; border-radius: 7px; position: relative; }
+  .sub-link::before { content: ""; position: absolute; left: 22px; top: 50%; width: 5px; height: 5px; border-radius: 50%; background: #d1d5db; transform: translateY(-50%); }
+  .sub-link:hover { color: var(--text); }
+  .sidebar-bottom { margin-top: auto; padding-top: 10px; }
+
+  /* Main */
+  .main { padding: 14px 18px 20px; min-width: 0; }
+  .topbar { display: flex; align-items: center; justify-content: space-between; margin-bottom: 12px; }
+  .topbar h1 { margin: 0; font-size: 18px; font-weight: 600; }
+  .top-actions { display: flex; gap: 8px; align-items: center; color: var(--text-muted); }
+  .icon-btn { width: 32px; height: 32px; border-radius: 8px; background: #fff; border: 1px solid var(--border); display: flex; align-items: center; justify-content: center; cursor: pointer; color: var(--text-muted); }
+  .avatar-btn { display: flex; align-items: center; gap: 4px; padding: 3px 8px 3px 3px; background: #fff; border: 1px solid var(--border); border-radius: 20px; cursor: pointer; color: var(--text-muted); }
+  .avatar-btn .av { width: 24px; height: 24px; border-radius: 50%; background: var(--primary); color: #fff; font-weight: 600; display: flex; align-items: center; justify-content: center; font-size: 10px; }
+
+  .sub-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px; }
+  .date-chip { padding: 6px 10px; background: #fff; border: 1px solid var(--border); border-radius: 7px; font-size: 12px; color: var(--text); display: inline-flex; gap: 6px; align-items: center; }
+  .btn-primary { background: var(--primary); color: #fff; border: none; padding: 8px 12px; border-radius: 7px; font-weight: 600; cursor: pointer; display: inline-flex; gap: 6px; align-items: center; font-size: 12px; }
+  .btn-primary:hover { background: var(--primary-dark); }
+
+  /* 3-column grid — fits 1440px without scroll */
+  .grid { display: grid; grid-template-columns: 260px 300px minmax(0, 1fr); gap: 12px; align-items: start; }
+  .col { display: flex; flex-direction: column; gap: 12px; min-width: 0; }
+
+  .card { background: var(--card); border-radius: var(--radius); box-shadow: var(--shadow); padding: 14px; }
+  .card-header { display: flex; align-items: center; justify-content: space-between; margin-bottom: 10px; }
+  .card-title { display: flex; align-items: center; gap: 7px; font-weight: 600; font-size: 13px; }
+  .card-title .ico-badge { width: 22px; height: 22px; background: var(--primary-light); color: var(--primary-dark); display: flex; align-items: center; justify-content: center; border-radius: 6px; }
+  .menu-dots { color: var(--text-muted); cursor: pointer; display: inline-flex; }
+
+  /* Queue */
+  .queue-tabs { display: flex; gap: 3px; background: #f3f4f6; padding: 3px; border-radius: 8px; margin-bottom: 8px; }
+  .queue-tab { flex: 1; text-align: center; padding: 5px; border-radius: 6px; font-size: 11.5px; cursor: pointer; color: var(--text-muted); font-weight: 500; }
+  .queue-tab.active { background: #fff; color: var(--text); box-shadow: var(--shadow); }
+  .queue-list { max-height: 780px; overflow-y: auto; padding-right: 2px; }
+  .queue-list::-webkit-scrollbar { width: 5px; }
+  .queue-list::-webkit-scrollbar-thumb { background: #e5e7eb; border-radius: 10px; }
+  .queue-item { display: flex; align-items: center; gap: 9px; padding: 8px; border-radius: 8px; cursor: pointer; margin-bottom: 3px; border: 1px solid transparent; background: #fff; }
+  .queue-item:hover { background: #f9fafb; }
+  .queue-item.selected { background: #fff; border-color: var(--primary); }
+  .avatar { display: flex; align-items: center; justify-content: center; color: #fff; font-weight: 600; flex-shrink: 0; }
+  .queue-item .avatar { width: 36px; height: 36px; border-radius: 8px; background: #e5e7eb; color: #6b7280; font-size: 12px; }
+  .queue-meta { flex: 1; min-width: 0; }
+  .queue-meta .name { font-weight: 600; font-size: 12.5px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+  .queue-meta .cond { font-size: 11px; color: var(--text-muted); margin-top: 1px; }
+
+  /* Profile */
+  .profile-body { text-align: center; padding: 4px 0 10px; }
+  .profile-body .avatar-lg { width: 72px; height: 72px; border-radius: 50%; margin: 0 auto 8px; font-size: 24px; background: #9ca3af; color: #fff; }
+  .profile-body .p-name { font-weight: 700; font-size: 14px; }
+  .profile-body .p-sub { font-size: 11.5px; color: var(--text-muted); margin-top: 2px; }
+  .profile-info { padding: 10px 2px 4px; display: flex; flex-direction: column; gap: 10px; border-top: 1px solid var(--border); }
+  .info-row { display: flex; gap: 9px; align-items: flex-start; padding-top: 3px; }
+  .info-row .ico-badge { width: 22px; height: 22px; background: #f3f4f6; color: var(--text-muted); border-radius: 6px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+  .info-row .label { font-size: 10.5px; color: var(--text-muted); }
+  .info-row .value { font-size: 12px; font-weight: 500; margin-top: 1px; word-break: break-word; }
+  .profile-actions { display: flex; gap: 7px; margin-top: 10px; padding-top: 10px; border-top: 1px solid var(--border); }
+  .profile-actions button { flex: 1; padding: 7px; border-radius: 7px; font-weight: 600; cursor: pointer; font-size: 12px; border: none; }
+  .btn-ghost { background: #f3f4f6; color: var(--text); }
+  .btn-ghost:hover { background: #e8ebf0; }
+
+  /* Appointments */
+  .appt-list { display: flex; flex-direction: column; gap: 14px; max-height: 360px; overflow-y: auto; padding: 4px 2px 4px 6px; margin-top: 2px; position: relative; }
+  .appt-list::-webkit-scrollbar { width: 5px; }
+  .appt-list::-webkit-scrollbar-thumb { background: #e5e7eb; border-radius: 10px; }
+  .appt-item { position: relative; padding-left: 22px; }
+  .appt-item::before { content: ""; position: absolute; left: 0; top: 3px; width: 10px; height: 10px; border-radius: 50%; background: var(--primary); box-shadow: 0 0 0 3px rgba(0,166,126,.18); z-index: 1; }
+  .appt-item:not(:last-child)::after { content: ""; position: absolute; left: 4px; top: 16px; bottom: -16px; width: 2px; background: #e5e7eb; }
+  .appt-date { font-size: 11px; color: var(--text-muted); margin-bottom: 4px; }
+  .appt-card { background: #f6f8fa; border-radius: 9px; padding: 9px 11px; }
+  .appt-card .type { font-weight: 600; font-size: 12.5px; }
+  .appt-card .dr { font-size: 11px; color: var(--text-muted); margin-top: 2px; }
+
+  /* Vitals */
+  .vitals-row { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+  .bp-value { font-size: 22px; font-weight: 700; }
+  .bp-value small { font-size: 11px; font-weight: 500; color: var(--text-muted); margin-left: 3px; }
+  .bp-legend { display: flex; gap: 12px; font-size: 11px; color: var(--text-muted); align-items: center; }
+  .bp-legend .dot { width: 7px; height: 7px; border-radius: 50%; display: inline-block; margin-right: 4px; }
+  .chart-wrap { height: 120px; margin-top: 6px; position: relative; }
+  .chart-wrap-sm { height: 44px; margin-top: 2px; }
+  .pulse-value, .spo2-value { font-size: 20px; font-weight: 700; }
+  .pulse-value small, .spo2-value small { font-size: 11px; color: var(--text-muted); font-weight: 500; margin-left: 4px; }
+  .spo2-bar { height: 22px; background: #f3f4f6; border-radius: 5px; overflow: hidden; margin: 10px 0 6px; position: relative; }
+  .spo2-bar-fill { height: 100%; background: linear-gradient(90deg, #e9c46a 0%, #d6a756 100%); border-radius: 5px; }
+  .axis-caption { display: flex; justify-content: space-between; font-size: 10.5px; color: var(--text-muted); }
+
+  /* About */
+  .about-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin-top: 2px; }
+  .about-tile { display: flex; gap: 9px; align-items: flex-start; padding: 2px; }
+  .about-tile .ico-badge { width: 26px; height: 26px; background: #f3f4f6; color: var(--text-muted); border-radius: 6px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+  .about-tile .label { font-size: 10.5px; color: var(--text-muted); }
+  .about-tile .value { font-size: 12px; font-weight: 600; margin-top: 2px; }
+  .surgery-badge { display: inline-flex; gap: 5px; align-items: center; font-size: 10.5px; padding: 2px 7px; border-radius: 12px; font-weight: 600; margin-top: 4px; }
+  .surgery-yes { background: #ffe8e8; color: #b42318; }
+  .surgery-no { background: var(--primary-light); color: var(--primary-dark); }
+  .surgery-badge .dot { width: 5px; height: 5px; border-radius: 50%; background: currentColor; }
+
+  /* Reports */
+  .reports-header { display: flex; justify-content: space-between; align-items: center; margin-top: 14px; margin-bottom: 8px; }
+  .reports-header .t { font-weight: 600; font-size: 13px; }
+  .toggle { display: inline-flex; align-items: center; gap: 8px; font-size: 11px; color: var(--text-muted); }
+  .toggle-switch { width: 28px; height: 16px; background: var(--primary); border-radius: 20px; position: relative; cursor: pointer; }
+  .toggle-switch::after { content: ""; position: absolute; top: 2px; right: 2px; width: 12px; height: 12px; background: #fff; border-radius: 50%; }
+  .reports-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+  .report-tile { display: flex; align-items: center; gap: 10px; padding: 9px 11px; background: #f9fafb; border-radius: 9px; }
+  .pdf-ico { width: 28px; height: 32px; background: #fff5f5; border: 1px solid #fde3e3; color: #d62828; border-radius: 4px; display: flex; align-items: center; justify-content: center; font-size: 9px; font-weight: 700; flex-shrink: 0; }
+  .report-meta { flex: 1; min-width: 0; }
+  .report-meta .fname { font-weight: 600; font-size: 12px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+  .report-meta .fsize { font-size: 10.5px; color: var(--text-muted); margin-top: 1px; }
+  .dl-ico { color: var(--text-muted); cursor: pointer; display: inline-flex; }
+
+  .loading { padding: 30px; text-align: center; color: var(--text-muted); }
+  .error { padding: 16px; background: #fff3f3; color: #b42318; border-radius: 10px; margin: 20px; }
+
+  @media (max-width: 1280px) {
+    .grid { grid-template-columns: 240px 280px minmax(0, 1fr); }
+    .about-grid { grid-template-columns: repeat(2, 1fr); }
+  }
+  @media (max-width: 1024px) {
+    .grid { grid-template-columns: 1fr; }
+    .vitals-row { grid-template-columns: 1fr; }
+  }
+</style>
+</head>
+<body>
+
+<!-- SVG SPRITE -->
+<svg xmlns="http://www.w3.org/2000/svg" style="display:none" aria-hidden="true">
+  <defs>
+    <symbol id="i-search" viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><line x1="21" x2="16.65" y1="21" y2="16.65"/></symbol>
+    <symbol id="i-grid" viewBox="0 0 24 24"><rect width="7" height="9" x="3" y="3" rx="1"/><rect width="7" height="5" x="14" y="3" rx="1"/><rect width="7" height="9" x="14" y="12" rx="1"/><rect width="7" height="5" x="3" y="16" rx="1"/></symbol>
+    <symbol id="i-stethoscope" viewBox="0 0 24 24"><path d="M4.8 2.3A.3.3 0 1 0 5 2H4a2 2 0 0 0-2 2v5a6 6 0 0 0 6 6v0a6 6 0 0 0 6-6V4a2 2 0 0 0-2-2h-1a.2.2 0 1 0 .3.3"/><path d="M8 15v1a6 6 0 0 0 6 6v0a6 6 0 0 0 6-6v-4"/><circle cx="20" cy="10" r="2"/></symbol>
+    <symbol id="i-user" viewBox="0 0 24 24"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></symbol>
+    <symbol id="i-calendar" viewBox="0 0 24 24"><rect width="18" height="18" x="3" y="4" rx="2"/><line x1="16" x2="16" y1="2" y2="6"/><line x1="8" x2="8" y1="2" y2="6"/><line x1="3" x2="21" y1="10" y2="10"/></symbol>
+    <symbol id="i-building" viewBox="0 0 24 24"><rect width="16" height="20" x="4" y="2" rx="2"/><path d="M9 22v-4h6v4"/><path d="M8 6h.01"/><path d="M16 6h.01"/><path d="M12 6h.01"/><path d="M12 10h.01"/><path d="M12 14h.01"/><path d="M16 10h.01"/><path d="M16 14h.01"/><path d="M8 10h.01"/><path d="M8 14h.01"/></symbol>
+    <symbol id="i-chart" viewBox="0 0 24 24"><line x1="12" x2="12" y1="20" y2="10"/><line x1="18" x2="18" y1="20" y2="4"/><line x1="6" x2="6" y1="20" y2="16"/></symbol>
+    <symbol id="i-contacts" viewBox="0 0 24 24"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></symbol>
+    <symbol id="i-settings" viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"/></symbol>
+    <symbol id="i-plug" viewBox="0 0 24 24"><path d="M12 22v-5"/><path d="M9 8V2"/><path d="M15 8V2"/><path d="M18 8v5a4 4 0 0 1-4 4h-4a4 4 0 0 1-4-4V8Z"/></symbol>
+    <symbol id="i-help" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><line x1="12" x2="12.01" y1="17" y2="17"/></symbol>
+    <symbol id="i-phone" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></symbol>
+    <symbol id="i-mail" viewBox="0 0 24 24"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 5L2 7"/></symbol>
+    <symbol id="i-pin" viewBox="0 0 24 24"><path d="M20 10c0 7-8 13-8 13s-8-6-8-13a8 8 0 0 1 16 0z"/><circle cx="12" cy="10" r="3"/></symbol>
+    <symbol id="i-bell" viewBox="0 0 24 24"><path d="M6 8a6 6 0 0 1 12 0c0 7 3 9 3 9H3s3-2 3-9"/><path d="M10.3 21a1.94 1.94 0 0 0 3.4 0"/></symbol>
+    <symbol id="i-chevron-down" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></symbol>
+    <symbol id="i-dots-h" viewBox="0 0 24 24"><circle cx="12" cy="12" r="1"/><circle cx="19" cy="12" r="1"/><circle cx="5" cy="12" r="1"/></symbol>
+    <symbol id="i-dots-v" viewBox="0 0 24 24"><circle cx="12" cy="12" r="1"/><circle cx="12" cy="5" r="1"/><circle cx="12" cy="19" r="1"/></symbol>
+    <symbol id="i-plus" viewBox="0 0 24 24"><line x1="12" x2="12" y1="5" y2="19"/><line x1="5" x2="19" y1="12" y2="12"/></symbol>
+    <symbol id="i-edit" viewBox="0 0 24 24"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"/><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"/></symbol>
+    <symbol id="i-heart-pulse" viewBox="0 0 24 24"><path d="M20.42 4.58a5.4 5.4 0 0 0-7.65 0l-.77.78-.77-.78a5.4 5.4 0 0 0-7.65 0C1.46 6.7 1.33 10.28 4 13l8 8 8-8c2.67-2.72 2.54-6.3.42-8.42z"/><path d="M3.22 12H9.5l.5-1 2 4.5 2-7 1.5 3.5h5.27"/></symbol>
+    <symbol id="i-activity" viewBox="0 0 24 24"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></symbol>
+    <symbol id="i-droplet" viewBox="0 0 24 24"><path d="M12 2.69l5.66 5.66a8 8 0 1 1-11.31 0z"/></symbol>
+    <symbol id="i-file" viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" x2="8" y1="13" y2="13"/><line x1="16" x2="8" y1="17" y2="17"/></symbol>
+    <symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></symbol>
+    <symbol id="i-download" viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" x2="12" y1="15" y2="3"/></symbol>
+  </defs>
+</svg>
+
+<div class="app">
+  <!-- SIDEBAR -->
+  <aside class="sidebar">
+    <div class="brand">
+      <div class="brand-logo">C</div>
+      <span>Cliniq</span>
+    </div>
+    <div class="search">
+      <svg class="ico ico-sm"><use href="#i-search"/></svg>
+      <span>Search</span>
+      <span class="kbd">⌘ K</span>
+    </div>
+    <div class="nav-section">Main Menu</div>
+    <div class="nav-link"><svg class="ico"><use href="#i-grid"/></svg>Dashboard</div>
+    <div class="nav-link"><svg class="ico"><use href="#i-stethoscope"/></svg>Doctor</div>
+    <div class="nav-link active"><svg class="ico"><use href="#i-user"/></svg>Patient</div>
+    <div class="sub-link">Patient List</div>
+    <div class="sub-link">Patient Profile</div>
+    <div class="sub-link">Add Patient</div>
+    <div class="nav-link"><svg class="ico"><use href="#i-calendar"/></svg>Appointment</div>
+    <div class="nav-link"><svg class="ico"><use href="#i-building"/></svg>Departments</div>
+    <div class="nav-section">Record</div>
+    <div class="nav-link"><svg class="ico"><use href="#i-chart"/></svg>Reports</div>
+    <div class="nav-link"><svg class="ico"><use href="#i-contacts"/></svg>Contacts</div>
+    <div class="sidebar-bottom">
+      <div class="nav-link"><svg class="ico"><use href="#i-settings"/></svg>Settings</div>
+      <div class="nav-link"><svg class="ico"><use href="#i-plug"/></svg>Integrations</div>
+      <div class="nav-link"><svg class="ico"><use href="#i-help"/></svg>Help Center</div>
+    </div>
+  </aside>
+
+  <!-- MAIN -->
+  <main class="main">
+    <div class="topbar">
+      <h1>Patient Profile</h1>
+      <div class="top-actions">
+        <button class="icon-btn" title="Mail"><svg class="ico ico-sm"><use href="#i-mail"/></svg></button>
+        <button class="icon-btn" title="Notifications"><svg class="ico ico-sm"><use href="#i-bell"/></svg></button>
+        <div class="avatar-btn"><span class="av" id="userInitials">DR</span><svg class="ico ico-xs"><use href="#i-chevron-down"/></svg></div>
+        <button class="icon-btn"><svg class="ico ico-sm"><use href="#i-dots-h"/></svg></button>
+      </div>
+    </div>
+
+    <div class="sub-header">
+      <span class="date-chip"><svg class="ico ico-sm"><use href="#i-calendar"/></svg>Last Update: <span id="dateRange">—</span></span>
+      <button class="btn-primary"><svg class="ico ico-sm"><use href="#i-plus"/></svg>Add Patient</button>
+    </div>
+
+    <div id="root">
+      <div class="loading">Loading Cliniq data…</div>
+    </div>
+  </main>
+</div>
+
+<template id="mainTemplate">
+  <div class="grid">
+
+    <!-- COL 1: Queue -->
+    <div class="col">
+      <div class="card">
+        <div class="card-header">
+          <div class="card-title">Patient Queue</div>
+          <span class="menu-dots"><svg class="ico ico-sm"><use href="#i-search"/></svg></span>
+        </div>
+        <div class="queue-tabs">
+          <div class="queue-tab active" data-filter="all">All</div>
+          <div class="queue-tab" data-filter="old">Old</div>
+          <div class="queue-tab" data-filter="new">New</div>
+        </div>
+        <div class="queue-list" id="queueList"></div>
+      </div>
+    </div>
+
+    <!-- COL 2: Profile + Appointments -->
+    <div class="col">
+      <div class="card">
+        <div class="card-header">
+          <div class="card-title">Patient Profile</div>
+          <span class="menu-dots"><svg class="ico ico-sm"><use href="#i-edit"/></svg></span>
+        </div>
+        <div class="profile-body">
+          <div class="avatar avatar-lg" id="profileAvatar">—</div>
+          <div class="p-name" id="profileName">—</div>
+          <div class="p-sub" id="profileSub">—</div>
+        </div>
+        <div class="profile-info">
+          <div class="info-row"><div class="ico-badge"><svg class="ico ico-sm"><use href="#i-phone"/></svg></div><div><div class="label">Phone Number</div><div class="value" id="profPhone">—</div></div></div>
+          <div class="info-row"><div class="ico-badge"><svg class="ico ico-sm"><use href="#i-mail"/></svg></div><div><div class="label">Email Address</div><div class="value" id="profEmail">—</div></div></div>
+          <div class="info-row"><div class="ico-badge"><svg class="ico ico-sm"><use href="#i-pin"/></svg></div><div><div class="label">Address</div><div class="value" id="profAddr">—</div></div></div>
+        </div>
+        <div class="profile-actions">
+          <button class="btn-ghost">Edit</button>
+          <button class="btn-primary" style="flex:1;justify-content:center;">Message</button>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-header">
+          <div class="card-title">Appointments</div>
+          <span class="menu-dots"><svg class="ico ico-sm"><use href="#i-edit"/></svg></span>
+        </div>
+        <div class="appt-list" id="apptList"></div>
+      </div>
+    </div>
+
+    <!-- COL 3: Vitals + About -->
+    <div class="col">
+      <div class="card">
+        <div class="card-header">
+          <div class="card-title"><div class="ico-badge"><svg class="ico ico-sm"><use href="#i-heart-pulse"/></svg></div>Blood Pressure</div>
+          <div class="bp-legend">
+            <span><span class="dot" style="background:#00a67e;"></span>Systolic Pressure</span>
+            <span><span class="dot" style="background:#e9c46a;"></span>Diastolic Pressure</span>
+            <span class="menu-dots"><svg class="ico ico-sm"><use href="#i-dots-v"/></svg></span>
+          </div>
+        </div>
+        <div class="bp-value"><span id="bpValue">—</span><small>mmHg</small></div>
+        <div class="chart-wrap"><canvas id="bpChart"></canvas></div>
+      </div>
+
+      <div class="vitals-row">
+        <div class="card">
+          <div class="card-header">
+            <div class="card-title"><div class="ico-badge"><svg class="ico ico-sm"><use href="#i-activity"/></svg></div>Pulse Rate</div>
+            <span class="menu-dots"><svg class="ico ico-sm"><use href="#i-dots-v"/></svg></span>
+          </div>
+          <div class="pulse-value"><span id="pulseValue">—</span><small>bpm</small></div>
+          <div class="chart-wrap-sm"><canvas id="pulseChart"></canvas></div>
+          <div class="axis-caption"><span>beats per minute</span><span>60</span></div>
+        </div>
+        <div class="card">
+          <div class="card-header">
+            <div class="card-title"><div class="ico-badge"><svg class="ico ico-sm"><use href="#i-droplet"/></svg></div>Blood oxygen level</div>
+            <span class="menu-dots"><svg class="ico ico-sm"><use href="#i-dots-v"/></svg></span>
+          </div>
+          <div class="spo2-value"><span id="spo2Value">—</span>%<small id="spo2Label">Normal</small></div>
+          <div class="spo2-bar"><div class="spo2-bar-fill" id="spo2Bar" style="width:0%"></div></div>
+          <div class="axis-caption"><span>SpO₂ saturation</span><span>100</span></div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-header">
+          <div class="card-title"><div class="ico-badge"><svg class="ico ico-sm"><use href="#i-user"/></svg></div>About Patient</div>
+          <span class="date-chip"><svg class="ico ico-sm"><use href="#i-calendar"/></svg>Monthly</span>
+        </div>
+        <div class="about-grid">
+          <div class="about-tile"><div class="ico-badge"><svg class="ico ico-sm"><use href="#i-file"/></svg></div><div><div class="label">Patient Complaint</div><div class="value" id="aboutComplaint">—</div></div></div>
+          <div class="about-tile"><div class="ico-badge"><svg class="ico ico-sm"><use href="#i-building"/></svg></div><div><div class="label">Floor / Ward</div><div class="value" id="aboutWard">—</div></div></div>
+          <div class="about-tile"><div class="ico-badge"><svg class="ico ico-sm"><use href="#i-calendar"/></svg></div><div><div class="label">Admission Date</div><div class="value" id="aboutAdmit">—</div></div></div>
+          <div class="about-tile"><div class="ico-badge"><svg class="ico ico-sm"><use href="#i-clock"/></svg></div><div><div class="label">Potential release date</div><div class="value" id="aboutRelease">—</div></div></div>
+          <div class="about-tile"><div class="ico-badge"><svg class="ico ico-sm"><use href="#i-stethoscope"/></svg></div><div><div class="label">Doctor's Diagnosis</div><div class="value" id="aboutDx">—</div><span id="aboutSurgery"></span></div></div>
+        </div>
+
+        <div class="reports-header">
+          <div class="t">Medical Reports</div>
+          <div class="toggle">Show Inactive <div class="toggle-switch"></div></div>
+        </div>
+        <div class="reports-grid" id="reportsGrid"></div>
+      </div>
+    </div>
+
+  </div>
+</template>
+
+<script>
+const DATA = { patients: [], vitals: [], appts: [], diagnoses: [] };
+const STATE = { selectedId: null, bpChart: null, pulseChart: null, filter: 'all' };
+
+function initialsFor(name) { return name.split(' ').map(s => s[0]).slice(0, 2).join('').toUpperCase(); }
+function fmtDate(s) {
+  if (!s) return '—';
+  const d = new Date(s);
+  return d.toLocaleDateString('en-US', { day: '2-digit', month: 'short', year: 'numeric' });
+}
+function fmtDateShort(s) {
+  if (!s) return '—';
+  const d = new Date(s);
+  return d.toLocaleDateString('en-GB', { day: '2-digit', month: '2-digit', year: 'numeric' });
+}
+function mockPhone(id) {
+  const n = parseInt(id.replace(/\D/g, ''), 10) || 0;
+  return `+1 (555) ${String(100 + (n % 900)).padStart(3,'0')}-${String(1000 + (n * 7 % 9000)).padStart(4,'0')}`;
+}
+function mockEmail(name) { return name.toLowerCase().replace(/\s+/g, '.') + '@cliniq.health'; }
+function mockAddress(id) {
+  const n = parseInt(id.replace(/\D/g, ''), 10) || 0;
+  const streets = ['Oak Street','Maple Ave','Elm Road','Pine Blvd','Cedar Lane','Birch Way'];
+  const cities = ['Mumbai, IN','Bengaluru, IN','Delhi, IN','Pune, IN','Chennai, IN'];
+  return `${n % 999} ${streets[n % streets.length]}, ${cities[n % cities.length]}`;
+}
+function mockComplaint(cond, dx) {
+  const map = {
+    'Cardiology': 'Chest pain, shortness of breath',
+    'Anxiety Disorder': 'Persistent worry, restlessness',
+    'Cancer': 'Fatigue, unexplained weight loss',
+    'Diabetes': 'Excessive thirst, frequent urination',
+    'Anesthesiology': 'Post-operative recovery',
+    'Behavioral Issues': 'Mood swings, sleep disturbance'
+  };
+  return map[cond] || dx;
+}
+
+function loadCSV(path) {
+  return new Promise((resolve, reject) => {
+    Papa.parse(path, { download: true, header: true, dynamicTyping: true, skipEmptyLines: true,
+      complete: res => resolve(res.data), error: err => reject(err) });
+  });
+}
+
+async function loadAll() {
+  try {
+    const [patients, vitals, appts, diagnoses] = await Promise.all([
+      loadCSV('../data/patients.csv'),
+      loadCSV('../data/vitals.csv'),
+      loadCSV('../data/appointments.csv'),
+      loadCSV('../data/diagnoses.csv'),
+    ]);
+    DATA.patients = patients.filter(p => p.patient_id);
+    DATA.vitals = vitals.filter(v => v.patient_id);
+    DATA.appts = appts.filter(a => a.patient_id);
+    DATA.diagnoses = diagnoses.filter(d => d.patient_id);
+    render();
+  } catch (e) {
+    document.getElementById('root').innerHTML = `<div class="error"><strong>Could not load CSVs.</strong> Serve over HTTP from project root, then open /dashboard/.<br>${e}</div>`;
+  }
+}
+
+function render() {
+  const tpl = document.getElementById('mainTemplate');
+  const root = document.getElementById('root');
+  root.innerHTML = '';
+  root.appendChild(tpl.content.cloneNode(true));
+
+  const dates = DATA.patients.map(p => new Date(p.admission_date)).sort((a,b)=>a-b);
+  if (dates.length) {
+    const a = dates[0], b = dates[dates.length-1];
+    const fmt = d => d.toLocaleDateString('en-US',{month:'short', year:'numeric'});
+    document.getElementById('dateRange').textContent = `${fmt(a)} – ${fmt(b)}`;
+  }
+
+  buildQueue();
+  document.querySelectorAll('.queue-tab').forEach(t => {
+    t.addEventListener('click', () => {
+      document.querySelectorAll('.queue-tab').forEach(x => x.classList.remove('active'));
+      t.classList.add('active');
+      STATE.filter = t.dataset.filter;
+      buildQueue();
+    });
+  });
+
+  if (DATA.patients.length) selectPatient(DATA.patients[1]?.patient_id || DATA.patients[0].patient_id);
+}
+
+function buildQueue() {
+  const list = document.getElementById('queueList');
+  list.innerHTML = '';
+  const now = new Date();
+  const fourteen = 14 * 24 * 3600 * 1000;
+  let pts = DATA.patients;
+  if (STATE.filter === 'new') pts = pts.filter(p => now - new Date(p.admission_date) <= fourteen);
+  else if (STATE.filter === 'old') pts = pts.filter(p => now - new Date(p.admission_date) > fourteen);
+
+  pts.slice(0, 80).forEach(p => {
+    const item = document.createElement('div');
+    item.className = 'queue-item' + (p.patient_id === STATE.selectedId ? ' selected' : '');
+    item.dataset.id = p.patient_id;
+    item.innerHTML = `
+      <div class="avatar">${initialsFor(p.name)}</div>
+      <div class="queue-meta">
+        <div class="name">${p.name}</div>
+        <div class="cond">${p.condition}</div>
+      </div>
+      <span class="menu-dots"><svg class="ico ico-sm"><use href="#i-dots-h"/></svg></span>`;
+    item.addEventListener('click', () => selectPatient(p.patient_id));
+    list.appendChild(item);
+  });
+}
+
+function selectPatient(id) {
+  STATE.selectedId = id;
+  document.querySelectorAll('.queue-item').forEach(el => {
+    el.classList.toggle('selected', el.dataset.id === id);
+  });
+
+  const p = DATA.patients.find(x => x.patient_id === id);
+  if (!p) return;
+  const dx = DATA.diagnoses.find(x => x.patient_id === id);
+  const vs = DATA.vitals.filter(x => x.patient_id === id).sort((a,b) => new Date(a.date) - new Date(b.date));
+  const aps = DATA.appts.filter(x => x.patient_id === id).sort((a,b) => new Date(a.date) - new Date(b.date));
+
+  const avatarEl = document.getElementById('profileAvatar');
+  avatarEl.textContent = initialsFor(p.name);
+  document.getElementById('profileName').textContent = p.name;
+  document.getElementById('profileSub').textContent = `${p.condition} Patient`;
+  document.getElementById('profPhone').textContent = mockPhone(p.patient_id);
+  document.getElementById('profEmail').textContent = mockEmail(p.name);
+  document.getElementById('profAddr').textContent = mockAddress(p.patient_id);
+
+  renderBP(vs);
+  renderPulse(vs);
+  renderSpo2(vs);
+
+  const apptList = document.getElementById('apptList');
+  apptList.innerHTML = '';
+  aps.forEach(a => {
+    const item = document.createElement('div');
+    item.className = 'appt-item';
+    item.innerHTML = `
+      <div class="appt-date">${fmtDate(a.date)}</div>
+      <div class="appt-card">
+        <div class="type">${a.type}</div>
+        <div class="dr">${a.doctor}</div>
+      </div>`;
+    apptList.appendChild(item);
+  });
+
+  document.getElementById('aboutComplaint').textContent = mockComplaint(p.condition, dx?.diagnosis || '');
+  document.getElementById('aboutWard').textContent = `Floor ${p.floor}, ${p.ward}`;
+  document.getElementById('aboutAdmit').textContent = fmtDateShort(p.admission_date);
+  document.getElementById('aboutRelease').textContent = dx ? fmtDateShort(dx.potential_release_date) : 'Unknown';
+  document.getElementById('aboutDx').textContent = dx ? dx.diagnosis : '—';
+  const surg = String(dx?.requires_surgery).toLowerCase() === 'true';
+  const surgEl = document.getElementById('aboutSurgery');
+  surgEl.innerHTML = surg
+    ? `<br><span class="surgery-badge surgery-yes"><span class="dot"></span>Requires Surgery</span>`
+    : `<br><span class="surgery-badge surgery-no"><span class="dot"></span>No Surgery</span>`;
+
+  const reportsGrid = document.getElementById('reportsGrid');
+  const reports = [
+    { name: `${p.name.split(' ')[0].toLowerCase()}-intake.pdf`, size: '1.5 MB' },
+    { name: `lab-results-${p.patient_id}.pdf`, size: '2.1 MB' },
+  ];
+  reportsGrid.innerHTML = reports.map(r => `
+    <div class="report-tile">
+      <div class="pdf-ico">PDF</div>
+      <div class="report-meta"><div class="fname">${r.name}</div><div class="fsize">${r.size}</div></div>
+      <div class="dl-ico"><svg class="ico ico-sm"><use href="#i-download"/></svg></div>
+    </div>`).join('');
+}
+
+function renderBP(vs) {
+  const labels = vs.map(v => new Date(v.date).toLocaleDateString('en-US', { month: 'short' }));
+  const sys = vs.map(v => v.systolic_bp);
+  const dia = vs.map(v => v.diastolic_bp);
+  const last = vs[vs.length - 1];
+  document.getElementById('bpValue').textContent = last ? `${last.systolic_bp}/${last.diastolic_bp}` : '—';
+
+  const seen = new Set();
+  const monthCallback = (val, idx) => {
+    const m = labels[idx];
+    if (seen.has(m)) return '';
+    seen.add(m);
+    return m;
+  };
+
+  if (STATE.bpChart) STATE.bpChart.destroy();
+  const ctx = document.getElementById('bpChart').getContext('2d');
+  STATE.bpChart = new Chart(ctx, {
+    type: 'line',
+    data: {
+      labels,
+      datasets: [
+        { label: 'Systolic', data: sys, borderColor: '#00a67e', backgroundColor: 'transparent', tension: 0, pointRadius: 0, borderWidth: 1, fill: false },
+        { label: 'Diastolic', data: dia, borderColor: '#e9c46a', backgroundColor: 'transparent', tension: 0, pointRadius: 0, borderWidth: 1, fill: false },
+      ]
+    },
+    options: {
+      responsive: true, maintainAspectRatio: false,
+      plugins: { legend: { display: false }, tooltip: { mode: 'index', intersect: false } },
+      scales: {
+        x: { ticks: { color: '#9ca3af', font: { size: 10 }, callback: monthCallback, autoSkip: false }, grid: { display: false }, border: { display: false } },
+        y: { position: 'right', min: 60, max: 160, ticks: { color: '#9ca3af', font: { size: 10 }, stepSize: 40 }, grid: { display: false }, border: { display: false } }
+      }
+    }
+  });
+}
+
+function renderPulse(vs) {
+  const labels = vs.map(v => fmtDate(v.date));
+  const pulse = vs.map(v => v.pulse_rate);
+  const last = vs[vs.length - 1];
+  document.getElementById('pulseValue').textContent = last ? last.pulse_rate : '—';
+
+  if (STATE.pulseChart) STATE.pulseChart.destroy();
+  const ctx = document.getElementById('pulseChart').getContext('2d');
+  STATE.pulseChart = new Chart(ctx, {
+    type: 'line',
+    data: { labels, datasets: [{ data: pulse, borderColor: '#00a67e', backgroundColor: 'transparent', tension: 0, pointRadius: 0, borderWidth: 1, fill: false }] },
+    options: {
+      responsive: true, maintainAspectRatio: false,
+      plugins: { legend: { display: false }, tooltip: { enabled: true } },
+      scales: { x: { display: false }, y: { display: false } }
+    }
+  });
+}
+
+function renderSpo2(vs) {
+  const last = vs[vs.length - 1];
+  if (!last) { document.getElementById('spo2Value').textContent = '—'; return; }
+  document.getElementById('spo2Value').textContent = last.spo2;
+  const label = last.spo2 >= 95 ? 'Normal' : last.spo2 >= 90 ? 'Low' : 'Critical';
+  document.getElementById('spo2Label').textContent = label;
+  document.getElementById('spo2Bar').style.width = Math.min(100, Math.max(0, last.spo2)) + '%';
+}
+
+loadAll();
+</script>
+
+</body>
+</html>
