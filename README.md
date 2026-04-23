@@ -2,7 +2,7 @@
 
 A synthetic healthcare patient-management dashboard. Generates 500 realistic patient records, runs exploratory analysis, and renders them in a clinical-style UI.
 
-![Cliniq dashboard](docs/dashboard.png)
+![Cliniq dashboard](docs/dashboard-v2.png)
 
 ## What's inside
 
