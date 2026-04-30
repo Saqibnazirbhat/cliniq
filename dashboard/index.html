@@ -91,8 +91,9 @@
   .queue-item { display: flex; align-items: center; gap: 9px; padding: 8px; border-radius: 8px; cursor: pointer; margin-bottom: 3px; border: 1px solid transparent; background: #fff; }
   .queue-item:hover { background: #f9fafb; }
   .queue-item.selected { background: #fff; border-color: var(--primary); }
-  .avatar { display: flex; align-items: center; justify-content: center; color: #fff; font-weight: 600; flex-shrink: 0; }
-  .queue-item .avatar { width: 36px; height: 36px; border-radius: 8px; background: #e5e7eb; color: #6b7280; font-size: 12px; }
+  .avatar { display: flex; align-items: center; justify-content: center; color: #fff; font-weight: 600; flex-shrink: 0; overflow: hidden; }
+  .avatar img { width: 100%; height: 100%; display: block; object-fit: cover; }
+  .queue-item .avatar { width: 38px; height: 38px; border-radius: 50%; background: #e5e7eb; }
   .queue-meta { flex: 1; min-width: 0; }
   .queue-meta .name { font-weight: 600; font-size: 12.5px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
   .queue-meta .cond { font-size: 11px; color: var(--text-muted); margin-top: 1px; }
@@ -100,7 +101,7 @@
 
   /* Profile */
   .profile-body { text-align: center; padding: 4px 0 10px; }
-  .profile-body .avatar-lg { width: 72px; height: 72px; border-radius: 50%; margin: 0 auto 8px; font-size: 24px; background: #9ca3af; color: #fff; }
+  .profile-body .avatar-lg { width: 80px; height: 80px; border-radius: 50%; margin: 0 auto 8px; background: #e5e7eb; overflow: hidden; }
   .profile-body .p-name { font-weight: 700; font-size: 14px; }
   .profile-body .p-sub { font-size: 11.5px; color: var(--text-muted); margin-top: 2px; }
   .profile-info { padding: 10px 2px 4px; display: flex; flex-direction: column; gap: 10px; border-top: 1px solid var(--border); }
@@ -353,6 +354,7 @@ const STATE = {
 const $ = s => document.querySelector(s);
 const $$ = s => document.querySelectorAll(s);
 const initialsFor = name => name.split(' ').map(s => s[0]).slice(0, 2).join('').toUpperCase();
+const avatarUrl = name => `https://api.dicebear.com/7.x/personas/svg?seed=${encodeURIComponent(name)}`;
 const fmtDate = s => s ? new Date(s).toLocaleDateString('en-US', { day: '2-digit', month: 'short', year: 'numeric' }) : '—';
 const fmtDateShort = s => s ? new Date(s).toLocaleDateString('en-GB', { day: '2-digit', month: '2-digit', year: 'numeric' }) : '—';
 const esc = s => String(s ?? '').replace(/[&<>"']/g, c => ({ '&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;' }[c]));
@@ -571,7 +573,7 @@ function buildQueue() {
 
   list.innerHTML = pts.slice(0, 80).map(p => `
     <div class="queue-item ${p.patient_id===STATE.selectedId?'selected':''}" data-id="${p.patient_id}">
-      <div class="avatar">${initialsFor(p.name)}</div>
+      <div class="avatar"><img src="${avatarUrl(p.name)}" alt=""/></div>
       <div class="queue-meta"><div class="name">${esc(p.name)}</div><div class="cond">${esc(p.condition)}</div></div>
       <span class="menu-dots" data-id="${p.patient_id}" onclick="event.stopPropagation(); openPatientMenu('${p.patient_id}')"><svg class="ico ico-sm"><use href="#i-dots-h"/></svg></span>
     </div>`).join('');
@@ -589,7 +591,7 @@ function selectPatient(id) {
   if (STATE.chartRange !== 'all') vs = vs.slice(-parseInt(STATE.chartRange, 10));
   const aps = DATA.appts.filter(x => x.patient_id === id).sort((a,b) => new Date(a.date) - new Date(b.date));
 
-  $('#profileAvatar').textContent = initialsFor(p.name);
+  $('#profileAvatar').innerHTML = `<img src="${avatarUrl(p.name)}" alt=""/>`;
   $('#profileName').textContent = p.name;
   $('#profileSub').textContent = `${p.condition} Patient`;
   $('#profPhone').textContent = p.phone || mockPhone(p.patient_id);
